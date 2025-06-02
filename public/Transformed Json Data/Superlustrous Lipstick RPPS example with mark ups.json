@@ -1,0 +1,565 @@
+{
+  "assembly_rpps_report": {
+    "date": "10/4/2021",
+    "time": "11:30:20AM",
+    "page": "1",
+    "status": "Approved"
+  },
+  "document_metadata": {
+    "notes": [
+      "Shelf life used to be here on paper copy, but we removed it. only on digital record now",
+      "Written at Parent level XXX (but shows as 000)",
+      "Not currently used, needs discussion, perhaps selecting country can do translation",
+      "script in KP looks at all shades in SAP '001-999 to see if drug flag indicator, if some are some aren't, then we list as art specific"
+    ],
+    "date": "10/4/2021",
+    "time": "11:30:20AM",
+    "page": "4",
+    "status": "Approved"
+  },
+  "request_information": {
+    "rm_request_no": "2019-0182",
+    "request_no": "24211",
+    "version": "3",
+    "manufacture_site": "",
+    "item_number": "7246618000",
+    "country": "All",
+    "drug_item": "None",
+    "artwork_specific": true
+  },
+  "product_information": {
+    "product_name": "RV SL RESTAGE LS",
+    "m_no": "987844(4708066000,4708064000,4708063000,4708062000,4708061000,4708060000,4707639000,4705132000, 4705118000,4705109000,4705108000,4705106000,4705104000,4705103000,4705102000,4705101000,4705099000,4705097000,4705096000,4705095000,4705093000,4705092000,4705091000,4705087000,4705086000,4705085000,4705084000,4705081000,4705078000,4705077000,4705076000,4705075000,4705074000,4705072000,4705070000,4705069000,4705068000,4705065000,4704953000,4704952000,4704947000,4704946000);000592(4707942000,4707941000,4707940000,4707939000,4707938000,4707937000,4707936000,4707935000,4707934000,4707931000,4707638000,4706326000,4706086000,4706085000,4706082000,4706081000,4706080000,4706079000,4706078000,4706077000,4706076000,4706075000,4706074000,4706073000,4706072000,4706071000,4706070000,4706069000,4706064000,4706053000,4706052000,4706051000,4706050000);463208(4708648000,4708647000,4708643000,4708615000,4708614000,4708613000,4708612000,4708611000,4708610000,4708609000,4708608000,4708607000,4708606000,4708605000,4708604000,4708603000,4708602000);463207(4708649000)",
+    "bulk_no": "987844,000592,463208,463207",
+    "tops_required": "No",
+    "formula_bulk_notes": "Formula/bulk # (SAP material code) This is a mess because issued at parent level. It makes document too long and causes mistakes. We want to write the document at parent level but want the factory to only see what is relevant for the shade they are filling."
+  },
+  "supporting_documents": {},
+  "critical_instructions": [
+    "THIS RPPS IS FINALIZED BASED UPON APPROVAL OF 72 pcs per shipper (36 flow-wraps/2)",
+    "***CRITICAL:  FILLING TEMPERATURES AND BREAK/SQUEEZE SPECIFICATIONS ARE SPECIFIC TO THE CREME OR PEARL FORMULAS.  USE THE M NUMBER LISTED AND THE BULK NUMBER LISTED ABOVE. EXAMPLE: USE 987844 FOR CREME, USE 000592 FOR PEARLS.",
+    "USE STANDARD CREME/PEARL MOLDS FOR RIKAS."
+  ],
+  "filling_specification": {
+    "instructions": {
+      "shipper_instructions": "IF 2211488000 SHIPPER IS ON THE BOM, USE THE 2ND PAGE OF THE TOPS (LABELED - 7246618000- SHIPPER 221488000). IF 2240829000 COMES OUT, USE THE FIRST PAGE OF THE ATTACHED TOPS PALLET PATTERN.",
+      "pallet_pattern_note": "pallet pattern will be attached if this box checked... tote does not"
+    },
+    "sections": [
+      "Fill Spec",
+      "Cap Torque",
+      "Coding",
+      "Label Info"
+    ],
+    "notes": {
+      "title": "Filling Specification Notes (updated instructions starting in April 2019):",
+      "section_explanation": "These checks drive what detail sections are included",
+      "boilerplate_note": "This is \"boiler plate\" instruction on filling. Same for all docs with Fill spec checked",
+      "instructions": [
+        "For all process orders, the operator is required to sample and record the fill weights in a paper or electronic document control system.",
+        "Operator must review the filling specifications below to confirm if the label claim type is by volume or by weight and if there are aesthetic concerns.",
+        "It is critical that the average net contents of each lot filled must meet or exceed the TARGET fill. The operator is responsible for making sure the line is adjusted to maintain this requirement.",
+        "In the course of filling, if weights exceed the upper control limit (max), or if weights not meet the lower control limit (min), the operator should make immediate adjustments to return to target. This applies to aesthetic limits as well, if any noted in OTHER FILLING REQUIREMENTS.",
+        "For products with label claim copy in NET. WT, this is a weight claim type. Use the Lower Control Limit (Min), Target, and Upper Control Limit (Max) weights as stated in filling instructions below for each bulk.",
+        "For products with label claim copy in Fluid Ounces/MLs the filling specifications this is volume claim type. The weights must be calculated using the following formula: Actual bulk SPG__x mL's = GRAMS.  Operators will need to obtain the SPG of the batch and then multiply by the specified ml values for Upper Control Limit, Target and Lower Control limit.  Use blank space provided in the filling spec below. These values need to be recorded on the paper or computer quality document for record keeping. Along with the measured weights of the samples taken during production.",
+        "For each bulk material number on the BOM, refer to the corresponding bulk parent number to identify which bulk instructions to follow.",
+        "The label stated claim and BOM fill are only for reference.",
+        "When checking weights, the tare weight must be re-established each time a component lot is changed."
+      ]
+    },
+    "fill_spec": {
+      "applicable_bulk": {
+        "formula_bulk_number": "987844",
+        "description": "",
+        "type": "Weight",
+        "label_stated": "0.00442 kg (These values for reference only)",
+        "bom_fill_wt": "4.2 g"
+      },
+      "parameters": {
+        "weight_of_product": {
+          "upper_control_limit": "4.6"
+        }
+      }
+    }
+  },
+  "filling_specifications": {
+    "weight_measurements": {
+      "target_setpoint": {
+        "value": "4.42",
+        "unit": "GRAMS"
+      },
+      "lower_control_limit": {
+        "value": "4.25",
+        "unit": "GRAMS"
+      }
+    },
+    "other_filling_requirements": {
+      "cap_torque": "n/a for lipstick package",
+      "fill_temp_meltdown": "n/a for lipstick package"
+    },
+    "notes": {
+      "engineer_instructions": "Engineer selects type being weight or volume claim... in the future we want to have a third option for \"aesthetic\" which may include a small table with a min/target/max distance for fill level"
+    }
+  },
+  "document_note": "There are 4 bulk rpps that are merged in the document since the parent material supports 4 different formula types across the multitude of shades",
+  "bulk_rpps_explanation": "in general.... bulk rpps describes how the assembly team handles the bulk before it comes out of the filling nozzle. A \"PPS\" or SBI is different and describes how the bulk itself is made.",
+  "product_specifications": [
+    {
+      "product_id": "000592",
+      "description": "",
+      "product_category": "LIPSTICKS",
+      "product_type": "Anhydrous Hot Pour",
+      "filling_cleaning": {
+        "flush": "hot Mineral oil RM#92574-00 or Dimethicone RM# 98508-00 (Primary formula ingredient*)",
+        "clean": "Risil Mat (2-3%) or Blast/Spectak (3 - 5 %)"
+      },
+      "filling_sanitizing": "Not required(Hot process)",
+      "flash_point": ">150 C",
+      "meltdown_temp": {
+        "celsius": {
+          "min": "88.00",
+          "max": "90.00",
+          "target": "89.00"
+        },
+        "fahrenheit": {
+          "min": "190.40",
+          "max": "194.00",
+          "target": "192.20"
+        }
+      },
+      "meltdown_instructions": {
+        "formula_type": "SL PEARL/FROST FORMULA",
+        "remelt_temperature": "88-92C",
+        "transfer_line": "83-86C",
+        "cold_tank": "10-14C",
+        "hot_tank": "28-32C",
+        "line_speed": "40 PIECES PER MINUTE",
+        "water_sarto_coolant_level": "MAXIMUM WEIR HIEGHT",
+        "surface_heater_setting": "HEATER #1=70%, HEATER #2=OFF",
+        "air_pressure": "0.75-1.25 LBS PSI",
+        "equipment": "REMELT/MOLDING KETTLE EQUIPPED WITH FLUID-HEATED JACKET, VARIABLE SPEED ANCHOR-TYPE AGITATION WITH BOTTOM-CONTACT SCRAPER BLADE OR OTHER APPROVED AGITATION. AUTOMATED LIPSTICK MOLDING LINE(REFER TO LS-004). SPLIT MOLDS AND CHILL PLATE (REFER TO LS-005)."
+      },
+      "fill_temp": {
+        "celsius": {
+          "min": "82.00",
+          "max": "84.00",
+          "target": "83.00"
+        },
+        "fahrenheit": {
+          "min": "179.60",
+          "max": "183.20",
+          "target": "181.40"
+        }
+      },
+      "fill_instructions": {
+        "fill_temp_range": "82-84C",
+        "critical_note": "FILLING TEMPERATURES AND BREAK/SQUEEZE SPECIFICATIONS ARE SPECIFIC TO THE CREME OR PEARL FORMULAS. REFER TO BOTTOM LABEL TO ENSURE THAT THE PRODUCT IS LABELED AS \"FROST' BEFORE USING THE BELOW SPECIFICATIONS.",
+        "bulk_handling": "BULK MAY BE HELD HOT FOR 8 HOURS. SALVAGE 10% MAX. CHARGE ENTIRE STORAGE CONTAINER INTO THE REMELT KETTLE PRIOR TO THE BEGINNING OF THE REMELT CYCLE. REFER TO REMELT PROCEDURE LS-003.",
+        "equipment": "A CUSTOMIZED LINE EQUIPPED WITH PISTON FILL HEAD, INFRA-RED HEAT BULBS, HEAT LAMPS, COOLING TUNNEL AND HIGH EFFICIENCY SURFACE HEATER. POSITIVE DISPLACEMENT-TYPE TRANSFER PUMP OR POINT-TYPE FILLER."
+      },
+      "finished_goods_specifications": {
+        "break_squeeze": {
+          "equipment": "CHATILLON UNIT",
+          "sample": "0.5\" LIPSTICK BULLETS @ 25C",
+          "average_breakage": {
+            "1_hour": "range TBD",
+            "16_hour": "0.90-1.40"
+          },
+          "average_squeeze": {
+            "1_hour": "range TBD",
+            "16_hour": "7.50-9.50"
+          }
+        }
+      }
+    },
+    {
+      "product_id": "463207",
+      "description": "",
+      "product_category": "LIPSTICKS",
+      "product_type": "Anhydrous Hot Pour",
+      "filling_cleaning": {
+        "flush": "hot Mineral oil RM#92574-00 or Dimethicone RM# 98508-00 (Primary formula ingredient*)",
+        "clean": "Risil Mat (2-3%) or Blast/Spectak (3 - 5 %)"
+      },
+      "filling_sanitizing": "Not required(Hot process)",
+      "flash_point": ">150 C",
+      "meltdown_temp": {
+        "celsius": {
+          "min": "88.00",
+          "max": "92.00",
+          "target": ""
+        },
+        "fahrenheit": {
+          "min": "190.40",
+          "max": "197.60",
+          "target": ""
+        }
+      },
+      "meltdown_instructions": {
+        "formula_type": "SL LS FORMULA WITH PEARLS",
+        "remelt_temperature": "88-92C",
+        "transfer_line": "83-86C",
+        "cold_tank": "10-14C",
+        "hot_tank": "28-32C",
+        "line_speed": "40 PIECES PER MINUTE",
+        "water_sarto_coolant_level": "MAXIMUM WEIR HIEGHT",
+        "surface_heater_setting": "HEATER #1=70%, HEATER #2=OFF",
+        "air_pressure": "0.75-1.25 LBS PSI",
+        "equipment": "REMELT/MOLDING KETTLE EQUIPPED WITH FLUID-HEATED JACKET, VARIABLE SPEED ANCHOR-TYPE AGITATION WITH BOTTOM-CONTACT SCRAPER BLADE OR OTHER APPROVED AGITATION. AUTOMATED LIPSTICK MOLDING LINE(REFER TO LS-004). SPLIT MOLDS AND CHILL PLATE (REFER TO LS-005)."
+      },
+      "fill_temp": {
+        "celsius": {
+          "min": "84.00",
+          "max": "86.00",
+          "target": ""
+        },
+        "fahrenheit": {
+          "min": "183.20",
+          "max": "186.80",
+          "target": ""
+        }
+      },
+      "fill_instructions": {
+        "fill_temp_range": "84-86C",
+        "critical_note": "FILLING TEMPERATURES AND BREAK/SQUEEZE SPECIFICATIONS ARE SPECIFIC TO THE CREME OR PEARL FORMULAS. REFER TO BOTTOM LABEL TO ENSURE THAT THE PRODUCT IS LABELED AS \"FROST' BEFORE USING THE BELOW SPECIFICATIONS.",
+        "bulk_handling": "BULK MAY BE HELD HOT FOR 8 HOURS. SALVAGE 10% MAX. CHARGE ENTIRE STORAGE CONTAINER INTO THE REMELT KETTLE PRIOR TO THE BEGINNING OF THE REMELT CYCLE. REFER TO REMELT PROCEDURE LS-003.",
+        "equipment": "A CUSTOMIZED LINE EQUIPPED WITH PISTON FILL HEAD, INFRA-RED HEAT BULBS, HEAT LAMPS, COOLING TUNNEL AND HIGH EFFICIENCY SURFACE HEATER. POSITIVE DISPLACEMENT-TYPE TRANSFER PUMP OR POINT-TYPE FILLER."
+      }
+    },
+    {
+      "product_id": "463208",
+      "finished_goods_specifications": {
+        "break_squeeze": {
+          "test_conditions": "0.5\" LIPSTICK BULLETS @ 20C",
+          "average_breakage": {
+            "1_hour": "1.0-1.50",
+            "16_hour": "1.10-1.60"
+          },
+          "average_squeeze": {
+            "1_hour": "6.0-9.0",
+            "16_hour": "6.0-9.0"
+          }
+        }
+      },
+      "product_details": {
+        "product_category": "LIPSTICKS",
+        "product_type": "Anhydrous Hot Pour"
+      },
+      "filling_information": {
+        "cleaning": "Flush- hot Mineral oil RM#92574-00 or Dimethicone RM# 98508-00 (Primary formula ingredient*) Clean - Risil Mat (2-3%) or Blast/Spectak (3 - 5 %)",
+        "sanitizing": "Not required(Hot process)",
+        "flash_point": ">150C"
+      },
+      "temperature_specifications": {
+        "meltdown_temp": {
+          "celsius": {
+            "min": "88.00",
+            "max": "92.00",
+            "target": "90.00"
+          },
+          "fahrenheit": {
+            "min": "190.40",
+            "max": "197.60",
+            "target": "194.00"
+          }
+        },
+        "fill_temp": {
+          "celsius": {
+            "min": "81.00",
+            "max": "83.00",
+            "target": "82.00"
+          },
+          "fahrenheit": {
+            "min": "177.80",
+            "max": "181.40",
+            "target": "179.60"
+          }
+        }
+      },
+      "process_instructions": {
+        "meltdown_instructions": "REMELT TEMPERATURE: 88-92C\nTRANSFER LINE: 83-85C\nCOLD TANK: 12-18C (Target 18C)\nHOT TANK: 27-29C\nLINE SPEED: 40 PIECES/MINUTE\nWATER/SARTO COOLANT LEVEL = MAXIMUM WEIR HEIGHT\nSURFACE HEATER SETTING (PRIOR TO BACK FILL) HEATER #1 = 100% HEATER #2 = OFF\nAIR PRESSURE = 0.75-1.25 LBS PSI",
+        "fill_instructions": "FILLING TEMPERATURE: 81-83C\nCRITICAL NOTE: FILLING TEMPERATURES AND BREAK/SQUEEZE SPECIFICATIONS ARE SPECIFIC TO THE CREME OR PEARL FORMULAS. REFER TO BOTTOM LABEL TO ENSURE THAT THE PRODUCT IS LABELED AS \"CREME' BEFORE USING THE BELOW SPECIFICATIONS.\nBULK MAY BE HELD HOT FOR 8 HOURS. SALVAGE 10% MAX. CHARGE ENTIRE STORAGE CONTAINER INTO THE REMELT KETTLE PRIOR TO THE BEGINNING OF THE REMELT CYCLE. REFER TO REMELT PROCEDURE LS-003."
+      },
+      "equipment_information": "A CUSTOMIZED LINE EQUIPPED WITH PISTON FILL HEAD, INFRA-RED HEAT BULBS, HEAT LAMPS, COOLING TUNNEL AND HIGH EFFICIENCY SURFACE HEATER. POSITIVE DISPLACEMENT-TYPE TRANSFER PUMP OR POINT-TYPE FILLER."
+    },
+    {
+      "product_id": "987844",
+      "finished_goods_specifications": {
+        "physical_properties": {
+          "color": "TMS",
+          "odor": "FRAGRANCE-FREE",
+          "appearance": "SOLID"
+        },
+        "break_squeeze": {
+          "test_conditions": "0.5\" LIPSTICK BULLETS @ 20C",
+          "average_breakage": {
+            "1_hour": "1.0-1.50"
+          },
+          "average_squeeze": {
+            "1_hour": "6.0-9.0"
+          }
+        }
+      },
+      "product_details": {
+        "product_category": "LIPSTICKS",
+        "product_type": "Anhydrous Hot Pour"
+      },
+      "filling_information": {
+        "cleaning": "Flush- hot Mineral oil RM#92574-00 or Dimethicone RM# 98508-00 (Primary formula ingredient*) Clean - Risil Mat (2-3%) or Blast/Spectak (3 - 5 %)",
+        "sanitizing": "Not required(Hot process)",
+        "flash_point": ">150C"
+      },
+      "temperature_specifications": {
+        "meltdown_temp": {
+          "celsius": {
+            "min": "88.00",
+            "max": "90.00",
+            "target": "89.00"
+          },
+          "fahrenheit": {
+            "min": "190.40",
+            "max": "194.00",
+            "target": "192.20"
+          }
+        },
+        "fill_temp": {
+          "celsius": {
+            "min": "82.00",
+            "max": "84.00",
+            "target": "83.00"
+          },
+          "fahrenheit": {
+            "min": "179.60",
+            "max": "183.20",
+            "target": "181.40"
+          }
+        }
+      },
+      "process_instructions": {
+        "meltdown_instructions": "SL CREME FORMULA:\nREMELT TEMPERATURE: 88-92C\nTRANSFER LINE: 83-85C\nCOLD TANK: 12-15C\nHOT TANK: 27-29C\nLINE SPEED: 40 PIECES/MINUTE\nWATER/SARTO COOLANT LEVEL = MAXIMUM WEIR HEIGHT\nSURFACE HEATER SETTING (PRIOR TO BACK FILL) HEATER #1 = 100% HEATER #2 = OFF\nAIR PRESSURE = 0.75-1.25 LBS PSI\nVARIABLE SPEED ANCHOR-TYPE AGITATION WITH BOTTOM-CONTACT SCRAPER BLADE OR OTHER APPROVED AGITATION."
+      }
+    }
+  ],
+  "document_comments": {
+    "procedure_reference": "Would love to have live linkage to reference specs/procedures"
+  },
+  "note": {
+    "content": "quality team is asking if we can combine our in process checklist/record sheet (SAR sheet) with the RPPS document. Meaning we put in some area for the operator to write the temperatures/torques/ weights on this printed document directly"
+  },
+  "fill_instructions": {
+    "temp_range": "82-84C",
+    "equipment": "Suitable re-melt/molding kettle equipped with fluid-heated jacket, variable speed anchor-type agitation with bottom contact scraper blade, or equivalent",
+    "critical_notes": [
+      "FILLING TEMPERATURES AND BREAK/SQUEEZE SPECIFICATIONS ARE SPECIFIC TO THE CREME OR PEARL FORMULAS. REFER TO BOTTOM LABEL TO ENSURE THAT THE PRODUCT IS LABELED AS \"CREME' BEFORE USING THE BELOW SPECIFICATIONS.",
+      "BULK MAY BE HELD HOT FOR 8 HOURS. SALVAGE 10% MAX. CHARGE ENTIRE STORAGE CONTAINER INTO THE REMELT KETTLE PRIOR TO THE BEGINNING OF THE REMELT CYCLE. REFER TO REMELT PROCEDURE LS-003."
+    ],
+    "equipment_details": "A CUSTOMIZED LINE EQUIPPED WITH PISTON FILL HEAD, INFRA-RED HEAT BULBS, HEAT LAMPS, COOLING TUNNEL AND HIGH EFFICIENCY SURFACE HEATER. POSITIVE DISPLACEMENT-TYPE TRANSFER PUMP OR POINT-TYPE FILLER."
+  },
+  "finished_goods_specifications": {
+    "color": "TMS",
+    "odor": "FRAGRANCE-FREE",
+    "appearance": "SOLID",
+    "break_squeeze": {
+      "equipment": "CHATILLON UNIT",
+      "sample_size": "0.5\" LIPSTICK BULLETS @ 25C",
+      "average_breakage": {
+        "1_hour": "range TBD",
+        "16_hour": "0.90-1.40"
+      },
+      "average_squeeze": {
+        "1_hour": "range TBD",
+        "16_hour": "8.50-10.50"
+      }
+    },
+    "coding": "For applicable code dates, Revlon Mfg. must retrieve from SAP system; Third Party Mfg. shall refer to TPM Manual for further instructions"
+  },
+  "batch_code": {
+    "description": "BASE",
+    "type": "Laser Etch",
+    "size": "1/16",
+    "color": null,
+    "placement_instructions": "LASER ETCH BATCH CODE ON SIDE OF BASE. 1/16 MAX."
+  },
+  "label_information": {
+    "bottom_label": {
+      "description": "Bottom",
+      "type": null,
+      "tolerance": null,
+      "placement_instructions": "BOTTOM OF BASE, CENTERED"
+    },
+    "upc_label": {
+      "description": "UPC Label",
+      "type": null,
+      "tolerance": null,
+      "placement_instructions": "SIDE OF CAP, 1/6 - 1/8 INCH ABOVE METAL BAND, CENTERED TOP TO BOTTOM."
+    }
+  },
+  "assembly_instructions": {
+    "bullet_information": "CAVITY = NEW SHAPE (SL), FINISH = SMOOTH, STYLE = SL. POMADE MAX HEIGHT PROTRUDES 1/16 INCH ABOVE TOP SURFACE OF A-SHELL. POMADE MIN HEIGHT SITS 1/16 INCH BELOW A-SHELL. BULLET SHOULD BE FULLY SEATED WITHIN THE CUP. BULLET AESTHETICS TAKE PRECEDENCE OVER FILL WEIGHTS.",
+    "shrinkband_application": "POSITION = FULL LENGTH EXCEPT FOR 1/4 INCH OF THE BASE EXPOSED AT BOTTOM DUE TO PUCK DEPTH. THE SHRINKBAND WILL BE PUSHED FLUSH TO TOP SURFACE OF CAP FOR ACCURACY WHEN PLACED."
+  },
+  "packout_instructions": {
+    "packing_method": "PACK WITH BULLET TIP UP IN FLOW WRAP",
+    "shipping_details": "PACK UPRIGHT INTO SHIPPERS OF UNIFORM COUNT, PER THE SHIPPING INFO BELOW.",
+    "pallet_pattern": "PALLET PATTERN AS PER TOPS 7246618000. (IF 2211488000 SHIPPER IS ON THE BOM, USE THE 2ND PAGE OF THE TOPS (LABELED - 7246618000- SHIPPER 221488000). IF 2240829000 COMES OUT, USE THE FIRST PAGE OF THE ATTACHED TOPS PALLET PATTERN.)"
+  },
+  "shipping_info": {
+    "pieces_per_pallet": "33264",
+    "pieces_per_chip": "2",
+    "pieces_per_casepack": "72",
+    "tie": null,
+    "high": null,
+    "sap_linkage": "Linkage to SAP for tech pack data"
+  },
+  "revision_history": {
+    "revision_date": "10/10/2019",
+    "revision_details": "REVISED TO SHOW UPDATES TO BULK NUMBERS FOR FORMULA UPDATES. K MANSBERGER 10/10/2019"
+  },
+  "qa_review_comments": "Does not have QA comments because this is not OTC drug",
+  "approval_information": {
+    "status": "Approved",
+    "signed_by": "Kale Mansberger",
+    "date": "10/10/2019"
+  },
+  "future_improvements": {
+    "notes": [
+      "need to discuss version control, if live linked document to SAP",
+      "In the future, we want ability to attach pictures of product standards and other helpful instructions"
+    ]
+  },
+  "document_info": {
+    "title": "Revlon",
+    "item_number": "7246618000",
+    "date_printed": "7/1/2019",
+    "last_saved": "7/1/2019",
+    "document_number": "7246618000",
+    "shipper_number": "2211488000"
+  },
+  "system_information": {
+    "process_description": "pallet pattern is made in TOPS, then saved to a network folder where KP merges the files together. SAP picks up the merge file and it can be found in CV04N transaction"
+  },
+  "packaging_specifications": {
+    "pallet_type": "GMA (Notched) 48.00x40.00x5.00",
+    "dimensions": {
+      "carton": {
+        "length": "1.7200 in",
+        "width": "0.7552 in",
+        "height": "3.0000 in",
+        "net_weight": "0.00 oz",
+        "gross_weight": "0.00 oz",
+        "cube": "3.897 in3"
+      },
+      "shipper": {
+        "length": "5.7500 in",
+        "width": "9.6250 in",
+        "height": "3.8125 in",
+        "net_weight": "0.00 lb",
+        "gross_weight": "0.29 lb",
+        "cube": "0.122 ft3",
+        "internal_dimensions": {
+          "length": "5.4375 (ID)",
+          "width": "9.3125 (ID)",
+          "height": "3.1875 (ID)"
+        }
+      },
+      "unitload": {
+        "length": "48.00 in",
+        "width": "38.50 in",
+        "height": "58.38 in",
+        "net_weight": "0.00 lb",
+        "gross_weight": "197.57 lb",
+        "cube": "62.429 ft3"
+      }
+    },
+    "efficiency": {
+      "area_efficiency": {
+        "carton": "92.35 %",
+        "shipper": "95.12 %"
+      },
+      "cubic_efficiency": {
+        "carton": "86.92 %",
+        "shipper": "94.02 %"
+      }
+    },
+    "pallet_configuration": {
+      "cartons_per_shipper": "36",
+      "total_cartons": "16632",
+      "total_shippers": "462",
+      "cases_per_layer": "33",
+      "layers_per_load": "14",
+      "pattern": "3x12x1 Triblock",
+      "rsc_area": {
+        "per_case": "2.87 ft2",
+        "total": "1326 ft2"
+      },
+      "density": "0.0376 gr/cc"
+    }
+  },
+  "notes": {
+    "special_instructions": "PALLET PATTERN TO BE USED WITH SUBSTITUTE SHIPPER 2211488000 ONLY"
+  },
+  "footer": {
+    "software": "REVLON - 01:58 pm (TOPS Pro Version 6.505)",
+    "user": "OWENS"
+  },
+  "special_note": {
+    "description": "This is a second TOPS because of a material phase out situation. Not a typical scenario, but does occur."
+  },
+  "pallet_specifications": {
+    "pallet_type": "GMA (Notched) 48.00x40.00x5.00",
+    "dimensions": {
+      "carton": {
+        "length": "1.7200 in",
+        "width": "0.9300 in",
+        "height": "3.0000 in",
+        "net_weight": "0.00 oz",
+        "gross_weight": "0.00 oz",
+        "cube": "4.799 in3"
+      },
+      "shipper": {
+        "length": "11.7500 in",
+        "width": "5.7500 in",
+        "height": "3.8125 in",
+        "net_weight": "0.00 lb",
+        "gross_weight": "0.23 lb",
+        "cube": "0.149 ft3",
+        "internal_dimensions": {
+          "length": "11.4375 (ID)",
+          "width": "5.4375 (ID)",
+          "height": "3.1875 (ID)"
+        }
+      },
+      "unitload": {
+        "length": "47.00 in",
+        "width": "34.75 in",
+        "height": "58.38 in",
+        "net_weight": "0.00 lb",
+        "gross_weight": "143.09 lb",
+        "cube": "55.174 ft3"
+      }
+    },
+    "efficiency": {
+      "area_efficiency": {
+        "carton": "92.59 %",
+        "shipper": "84.45 %"
+      },
+      "cubic_efficiency": {
+        "carton": "87.15 %",
+        "shipper": "83.47 %"
+      }
+    },
+    "configuration": {
+      "carton_per_shipper": "36",
+      "total_cartons": "12096",
+      "total_shippers": "336",
+      "cases_per_layer": "24",
+      "layers_per_load": "14",
+      "pattern": "12x3x1 Interlock",
+      "rsc_area": {
+        "per_unit": "2.32 ft2",
+        "total": "781 ft2"
+      },
+      "density": "0.0250 gr/cc"
+    }
+  }
+}

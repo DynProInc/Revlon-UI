@@ -1,0 +1,316 @@
+{
+  "division": "MULTISECTOR",
+  "specification": {
+    "number": "2229905000a",
+    "date": "09.feb.2017"
+  },
+  "component": {
+    "code": "EA261271",
+    "name": "OCAP PS BODY MIST"
+  },
+  "issue": "NEW SPECIFICATION",
+  "description": "Snap on Overcap, cilyndrical shape, with 3 inner nibs",
+  "material": "PS",
+  "dimensions": "According to drawing",
+  "press": "NA",
+  "color": "Natural Clear",
+  "separation_force": "6 - 14 lbf",
+  "packaging": {
+    "method": "On carton trays with plastic film to avoid dust package into corrugated shipper"
+  },
+  "labelling": {
+    "requirements": "Each carton must be labelled with following information, component description Revlon Code, manufacturing date, quantity, and batch number"
+  },
+  "quality_control": {
+    "inspection": "Inspection according to MILITAR STD. 105 D and report: CC-CFE-030"
+  },
+  "signatures": {
+    "required_from": [
+      "ING. DE EMPAQUE",
+      "CONTROL DE CALIDAD",
+      "COMPRAS",
+      "PROVEEDOR"
+    ]
+  },
+  "page_info": "P\u00c1G: 1 DE 3",
+  "cap_specifications": {
+    "drawing_information": {
+      "drawing_number": "EW1408-J13",
+      "revisions": [
+        {
+          "revision": "A",
+          "date": "22.08.14",
+          "changes": "Changed diameter from 49.5 to 48.8mm"
+        },
+        {
+          "revision": "B",
+          "date": "27.08.14",
+          "changes": "Changed height from 40mm to 53mm"
+        }
+      ]
+    },
+    "dimensions": {
+      "main_dimensions": {
+        "diameter": "48.80 \u00b10.25",
+        "inner_diameter": "46.20 \u00b10.25",
+        "height": "53 \u00b10.50",
+        "width": "44.27 \u00b10.25",
+        "thickness": "1.30"
+      },
+      "detail_dimensions": {
+        "radius_1": "R0.50",
+        "radius_2": "R0.30",
+        "angle": "20\u00b0",
+        "measurement_1": "2.10",
+        "measurement_2": "1.25"
+      }
+    },
+    "views": {
+      "section_a_a": {
+        "title": "SECCI\u00d3N A-A",
+        "scale": "ESCALA 1 : 1"
+      },
+      "detail_b": {
+        "title": "DETALLE B",
+        "scale": "ESCALA 5 : 1"
+      }
+    },
+    "product_specifications": {
+      "overflow_capacity": "N/A",
+      "fill_level": "N/A",
+      "weight": "N/A",
+      "neck_finish": "N/A"
+    },
+    "document_information": {
+      "customer": "VPI PACKAGING",
+      "title": "CAP ARDEN 255ml.",
+      "date": "13.08.14",
+      "drawn_by": "JLV",
+      "checked_by": "JLV",
+      "material": "PET BOTTLES",
+      "manufacturer": "ESCO-WILL",
+      "scale": "1/1(5/1)",
+      "units": "mm.",
+      "page_info": "P\u00c1G: 2 DE 3"
+    }
+  },
+  "defective_list": {
+    "title": "DEFECTIVE LIST FOR POTS",
+    "sections": {
+      "aspect": {
+        "title": "ASPECT (CONTROL LEVEL II)",
+        "defects": [
+          {
+            "type": "MAJOR",
+            "description": "DIRT"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "WRONG MATERIAL"
+          },
+          {
+            "type": "MAJOR",
+            "description": "IMPURITIES"
+          },
+          {
+            "type": "MAJOR",
+            "description": "INTERNAL FIN"
+          },
+          {
+            "type": "MAJOR",
+            "description": "BROKEN BODY"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "MIXED COMPONENTS"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "HOLES"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "REDUCED FINISH"
+          },
+          {
+            "type": "MAJOR",
+            "description": "DEFORMITY"
+          },
+          {
+            "type": "MAJOR",
+            "description": "BODY HOLES"
+          },
+          {
+            "type": "MAJOR",
+            "description": "FIN"
+          },
+          {
+            "type": "MAJOR",
+            "description": "STRIPED"
+          },
+          {
+            "type": "MAJOR",
+            "description": "FINISH OFF-CENTRE"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "MATERIAL COLOR"
+          }
+        ]
+      },
+      "metrology": {
+        "title": "METROLOGY (CONTROL LEVEL S-3, N.C.A. 1.0)",
+        "defects": [
+          {
+            "type": "MAJOR",
+            "description": "WEIGHT"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "DIAMETER"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "HEIGHT"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "TREAD"
+          }
+        ]
+      },
+      "tests": {
+        "title": "TESTS (CONTROL LEVEL S-3 N.A.C. 1.5)",
+        "defects": [
+          {
+            "type": "CRITICAL",
+            "description": "ACETONE"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "IMPACT"
+          },
+          {
+            "type": "MAJOR",
+            "description": "TONE"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "HERMETICITY"
+          },
+          {
+            "type": "MAJOR",
+            "description": "IMPURITIES"
+          },
+          {
+            "type": "MAJOR",
+            "description": "PAINTING NOT REGULAR"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "CAPACITY"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "ADHESION"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "PERFORMANCE WITH CAP"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "TORQUE"
+          }
+        ]
+      },
+      "defects": {
+        "title": "DEFECTS (CONTROL LEVEL II)",
+        "defects": [
+          {
+            "type": "CRITICAL",
+            "description": "COMPONENT NUMBER MIXED"
+          },
+          {
+            "type": "MAJOR",
+            "description": "SPOILT PACK"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "COMPONENT NUMBER ABSENCE"
+          },
+          {
+            "type": "MAJOR",
+            "description": "NOT SEALED PACK"
+          },
+          {
+            "type": "MAJOR",
+            "description": "COMPONENT NUMBER ILLEGIBLE"
+          },
+          {
+            "type": "MAJOR",
+            "description": "ABSENCE OF THE NAME OF THE SUPPLIER"
+          },
+          {
+            "type": "CRITICAL",
+            "description": "WRONG COMPONENT NUMBER"
+          },
+          {
+            "type": "MAJOR",
+            "description": "ILLEGIBLE SUPPLIER'S NAME"
+          },
+          {
+            "type": "MAJOR",
+            "description": "PACKING QUANTITY WRONG"
+          },
+          {
+            "type": "MAJOR",
+            "description": "COMPONENT'S NAME ABSENCE"
+          },
+          {
+            "type": "MAJOR",
+            "description": "MANUFACTURE DATE ILLEGIBLE"
+          },
+          {
+            "type": "MAJOR",
+            "description": "COMPONENT'S NAME ILLEGIBLE"
+          },
+          {
+            "type": "MAJOR",
+            "description": "MANUFACTURE DATE ABSENCE"
+          },
+          {
+            "type": "MAJOR",
+            "description": "PACK SIZE DIFFERENT"
+          },
+          {
+            "type": "MAJOR",
+            "description": "PACKED CORRECT"
+          },
+          {
+            "type": "MAJOR",
+            "description": "PACK SIZE MIXED"
+          },
+          {
+            "type": "MAJOR",
+            "description": "PACKING NOT CORRECT"
+          }
+        ]
+      }
+    },
+    "defect_types": {
+      "critical": {
+        "code": "C",
+        "value": 0.1
+      },
+      "major": {
+        "code": "M",
+        "value": 1.0
+      },
+      "minor": {
+        "code": "m",
+        "value": 4
+      }
+    }
+  }
+}

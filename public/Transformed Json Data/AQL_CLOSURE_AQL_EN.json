@@ -1,0 +1,90 @@
+{
+  "technical_specification": {
+    "title": "Technical Department of Packaging TECHNICAL SPECIFICATION AQL CLOSURE",
+    "defect_categories": {
+      "critical": {
+        "aql": "0,1",
+        "defects": [
+          "Rests of blow moulding castings",
+          "Any breakage or tear on the surface edges that may eventually harm the user",
+          "Cuts, cracks, breakages or tears",
+          "Excess of process additives (i.e. demoulders) that can eventually impede a final proper labelling or silk screening",
+          "Strange shape, not according to the bottle design",
+          "Caps or lids with unproper finish, lack of material or simply not filled out.",
+          "In case of disk-top caps: open of bad assembled plug",
+          "In case of flip top caps: broken, partially broken or deformed hinge",
+          "In case of caps (or lids) purchased to be used with containers coming from the standard range of a supplier: leakness test no OK",
+          "In case of caps made up of two or more pieces: bad assembling affecting functionality",
+          "Lack of liner (when it is required on the technical specification)",
+          "Non specified finish",
+          "Wrong color",
+          "Wrong decoration colors (when required)",
+          "Wrong color for the metal overshell (when required)"
+        ]
+      },
+      "major_a": {
+        "aql": "1",
+        "defects": [
+          "Off specification dimensions (height, diameter, etc.)",
+          "Off specification neck dimensions",
+          "Off specification wall thickness",
+          "Off specification wheight",
+          "Thread badly finished, causing friction while screwing and a plastic britteling (plastic particles come off)",
+          "Deformed thread",
+          "Neck and body with very visible seams",
+          "Unproper material distribution",
+          "Bad adhesiveness of the overmoulded piece (when required)",
+          "Off specification liner thickness",
+          "Unproperly assembled liner, broken liner or liner that tends to fall from its correct position",
+          "Delaminated or torn liner",
+          "In case of caps made up of two or more pieces: play or movement in between the pieces, in axial or rotational direction.",
+          "In case of caps or lids with metal overshell: corrosion of decolouring",
+          "In case of caps or lids with metal overshell: warps, dents or plies.",
+          "In case of caps or lids with metal overshell: lack of protective varnish (there where is needed according to specification)",
+          "Unproperly assembled metal overshell or metal overshell that tends to fall from its correct position",
+          "Incorrect decoration, lack of ink, unreadability or printing breakage"
+        ]
+      },
+      "major_b": {
+        "aql": "2,5",
+        "defects": [
+          "Uneven surface, rugosity, spots or flecks",
+          "Presence of scratches or scuffings",
+          "Surface unproper definition after the manufacturing process",
+          "Panneling",
+          "Unproper masterbatch scattering",
+          "In case of transparent or translucent bottles: blurry, unclear material",
+          "In case of plastic pieces: embedded foreign matter incorporated during manufacturing process",
+          "Dust, hair, foreign bodies or particles spread on the jar surface",
+          "Breakage or lack of decoration",
+          "Out of register affecting the inks of the decoration",
+          "Breakage or lack of foil",
+          "Faded decoration",
+          "Overload decoration",
+          "Rests of the adhesive used for the metal overshell assembling",
+          "Failure of the Scotch 508 test",
+          "Failure of the resistance to the product abrasion",
+          "Failure of the resistance to the abrasion when the bottle is rubbed on other surface"
+        ]
+      },
+      "minor": {
+        "aql": "4",
+        "defects": [
+          "Cap or lid deviation comparing to the color card approved",
+          "Hot foil shade deviation comparing to the color card approved",
+          "Metal overshell shade of finish deviation",
+          "In case of embossing elements: lack of relief",
+          "Decoration position slightly deviated",
+          "Incorrect identification of the component, or simply lack of it."
+        ]
+      }
+    },
+    "aql_list_updating": {
+      "fields": [
+        "Manager",
+        "Data",
+        "Change"
+      ]
+    }
+  }
+}

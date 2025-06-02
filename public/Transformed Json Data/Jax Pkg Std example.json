@@ -1,0 +1,46 @@
+{
+  "packing_standard": {
+    "title": "Packing Standard Photos",
+    "page": "Page 1 of 2",
+    "date": "10/4/2021",
+    "product": {
+      "name": "CON ARGAN PE ORIG 2.25oz 6/CS - CANADA",
+      "finished_good_part_number": "7259553000"
+    },
+    "issue": "1",
+    "preparer": "DWR",
+    "finished_good_part_number": "7259553000"
+  },
+  "assembly_instruction": {
+    "details": [
+      "FILL, CAP, APPLY TOP AND BOTTOM LABEL, AND PACK EACH JAR INTO AN INDIVIDUAL CARTON. PACK 6 CARTONED JARS INSIDE A BOOK FOLD SHIPPER. CLOSE AND TAPE SHIPPER. AFFIX ONE CASE LABEL TO A CONSISTENT LENGTH PANEL OF SHIPPER. PALLETIZE PER APPROVED PALLET PATTERN. PLACE ONE LAYER PAD UNDER 1st LAYER."
+    ]
+  },
+  "filling_instruction": {
+    "minimum_fill": {
+      "oz": "2.25",
+      "g": "63.70"
+    },
+    "min_net_wt": "63.70 g",
+    "target_net_wt": "65.60 g",
+    "max_net_wt": "68.70 g",
+    "specific_gravity": "N/A"
+  },
+  "capping_instruction": {
+    "min_max_release_torque": {
+      "min": "15 In-Lb",
+      "max": "40"
+    }
+  },
+  "special_instruction": {
+    "details": [
+      "BOTTOM LABELS TO BE APPROXIMATELY CENTERED INSIDE RECESSED AREA OF JAR. LID LABELS TO BE APPROXIMATELY CENETERED ON LID. NO ROTATIONAL ORIENTATION OF TOP/BOTTOM LABEL IS REQUIRED.",
+      "PALLET TO BE STRETCH WRAPPED PRIOR TO SHIPMENT."
+    ]
+  },
+  "revision_history": {
+    "revisions": [
+      "10/4/2021 - NEW REFLECTS CANADIAN VERSION"
+    ]
+  }
+}

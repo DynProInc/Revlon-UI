@@ -1,0 +1,1022 @@
+import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
+import MockAdapter from 'axios-mock-adapter';
+import { UserRole, getPermissionsByRole } from './userService';
+
+// Import record types
+interface DataRecord {
+  id: string;
+  name: string;
+  createdAt: string;
+  createdBy?: string;
+  status: string;
+  confidence?: number;
+  // Add other fields as needed
+}
+
+// Define approval status types
+export enum ApprovalStatus {
+  PENDING = 'pending',
+  QA_APPROVED = 'qa_approved',
+  QA_REJECTED = 'qa_rejected',
+  STEWARD_APPROVED = 'steward_approved',
+  STEWARD_REJECTED = 'steward_rejected'
+}
+
+// Define ApprovalQueueItem interface
+export interface ApprovalQueueItem {
+  id: string;
+  recordId: string;
+  recordName: string;
+  submittedBy: string;
+  submittedAt: string;
+  dueDate: string;
+  priority: 'high' | 'medium' | 'low';
+  qaStatus: ApprovalStatus;
+  stewardStatus: ApprovalStatus;
+  qaApprovedAt?: string;
+  qaRejectedAt?: string;
+  stewardApprovedAt?: string;
+  stewardRejectedAt?: string;
+  qaApprovedBy?: string;
+  qaRejectedBy?: string;
+  stewardApprovedBy?: string;
+  stewardRejectedBy?: string;
+  qaComment?: string;
+  stewardComment?: string;
+}
+
+// Mock records for testing
+const mockRecords: DataRecord[] = [
+  {
+    id: 'record-001',
+    name: 'Critical Financial Report Q1 2023',
+    createdAt: '2023-04-15T10:30:00Z',
+    createdBy: 'user-1001',
+    status: 'active',
+    confidence: 0.87
+  },
+  {
+    id: 'record-002',
+    name: 'Customer Segmentation Analysis',
+    createdAt: '2023-04-16T14:20:00Z',
+    createdBy: 'user-1002',
+    status: 'active',
+    confidence: 0.92
+  },
+  {
+    id: 'record-003',
+    name: 'Product Review - Summer Collection',
+    createdAt: '2023-04-17T09:15:00Z',
+    createdBy: 'user-1003',
+    status: 'active',
+    confidence: 0.78
+  },
+  {
+    id: 'record-004',
+    name: 'Urgent Compliance Audit Results',
+    createdAt: '2023-04-18T11:45:00Z',
+    createdBy: 'user-1004',
+    status: 'active',
+    confidence: 0.95
+  },
+  {
+    id: 'record-005',
+    name: 'Marketing Campaign Performance Check',
+    createdAt: '2023-04-19T16:30:00Z',
+    createdBy: 'user-1005',
+    status: 'active',
+    confidence: 0.83
+  }
+];
+
+// Mock users for approval workflow
+const approvalUsers = [
+  { id: 'user-1001', name: 'John Smith', role: 'Data Analyst' },
+  { id: 'user-1002', name: 'Emily Johnson', role: 'Quality Reviewer' },
+  { id: 'user-1003', name: 'Michael Chen', role: 'Senior Reviewer' },
+  { id: 'user-1004', name: 'Sarah Williams', role: 'Data Manager' },
+  { id: 'user-1005', name: 'Robert Davis', role: 'Department Head' }
+];
+
+// Initialize mock axios instance
+const mockAxios = new MockAdapter(axios);
+
+// In-memory approval items storage
+let approvalItems: ApprovalQueueItem[] = [];
+
+// Helper function to calculate a due date (3-7 days from submission)
+const calculateDueDate = (submittedDate: string): string => {
+  const date = new Date(submittedDate);
+  const daysToAdd = Math.floor(Math.random() * 5) + 3; // 3-7 days
+  date.setDate(date.getDate() + daysToAdd);
+  return date.toISOString();
+};
+
+// Initialize approval queue with mock data
+const initializeApprovalQueue = async (): Promise<ApprovalQueueItem[]> => {
+  try {
+    // Map records to approval queue items
+    const items: ApprovalQueueItem[] = mockRecords.map(record => {
+      // Determine priority based on record name keywords
+      let priority: 'high' | 'medium' | 'low' = 'low';
+      const recordName = record.name.toLowerCase();
+      
+      if (recordName.includes('urgent') || recordName.includes('critical') || recordName.includes('important')) {
+        priority = 'high';
+      } else if (recordName.includes('review') || recordName.includes('check')) {
+        priority = 'medium';
+      }
+      
+      return {
+        id: `approval-${record.id}`,
+        recordId: record.id,
+        recordName: record.name,
+        submittedBy: record.createdBy || 'System',
+        submittedAt: record.createdAt,
+        dueDate: calculateDueDate(record.createdAt),
+        priority,
+        qaStatus: ApprovalStatus.PENDING,
+        stewardStatus: ApprovalStatus.PENDING
+      };
+    });
+    
+    return items;
+  } catch (error) {
+    console.error('Error initializing approval queue:', error);
+    return [];
+  }
+};
+
+// Setup mock endpoints
+mockAxios.onGet('/api/approvals').reply(async (config: any) => {
+  try {
+    const userRole = config.headers?.['X-User-Role'] as UserRole;
+    const userId = config.headers?.['X-User-Id'] as string;
+    
+    if (!userRole) {
+      return [401, { message: 'Unauthorized - Missing role' }];
+    }
+    
+    // Initialize if empty
+    if (approvalItems.length === 0) {
+      approvalItems = await initializeApprovalQueue();
+    }
+    
+    // Filter based on role
+    let filteredItems = [...approvalItems];
+    
+    switch (userRole) {
+      case UserRole.ADMIN:
+        // Admin can see all records
+        break;
+      case UserRole.QA:
+        // QA can see all records
+        break;
+      case UserRole.DATA_STEWARD:
+        // Data Steward can only see QA approved records
+        filteredItems = filteredItems.filter(item => item.qaStatus === ApprovalStatus.QA_APPROVED);
+        break;
+      case UserRole.VIEWER:
+        // Viewer can see all records but with limited actions
+        break;
+      default:
+        return [403, { message: 'Forbidden - Insufficient permissions' }];
+    }
+    
+    return [200, { approvalItems: filteredItems }];
+  } catch (error) {
+    console.error('Error fetching approvals:', error);
+    return [500, { message: 'Internal server error' }];
+  }
+});
+
+mockAxios.onGet(/\/api\/approvals\/\w+/).reply(async (config: any) => {
+  try {
+    const id = config.url?.split('/').pop();
+    const userRole = config.headers?.['X-User-Role'] as UserRole;
+    
+    if (!userRole) {
+      return [401, { message: 'Unauthorized - Missing role' }];
+    }
+    
+    // Initialize if empty
+    if (approvalItems.length === 0) {
+      approvalItems = await initializeApprovalQueue();
+    }
+    
+    const item = approvalItems.find(item => item.id === id || item.recordId === id);
+    
+    if (!item) {
+      return [404, { message: 'Approval item not found' }];
+    }
+    
+    // Check permissions based on role
+    const permissions = getPermissionsByRole(userRole);
+    
+    if (userRole === UserRole.DATA_STEWARD && item.qaStatus !== ApprovalStatus.QA_APPROVED) {
+      return [403, { message: 'Forbidden - Data Steward can only view QA approved records' }];
+    }
+    
+    return [200, { approvalItem: item }];
+  } catch (error) {
+    console.error('Error fetching approval item:', error);
+    return [500, { message: 'Internal server error' }];
+  }
+});
+
+mockAxios.onPost('/api/approvals/qa/approve').reply((config: any) => {
+  try {
+    const { recordId, userId, comment } = JSON.parse(config.data);
+    const userRole = config.headers?.['X-User-Role'] as UserRole;
+    
+    if (!userRole || (userRole !== UserRole.ADMIN && userRole !== UserRole.QA)) {
+      return [403, { message: 'Forbidden - Insufficient permissions' }];
+    }
+    
+    const itemIndex = approvalItems.findIndex(item => item.recordId === recordId);
+    
+    if (itemIndex === -1) {
+      return [404, { message: 'Approval item not found' }];
+    }
+    
+    // Update the item
+    approvalItems[itemIndex] = {
+      ...approvalItems[itemIndex],
+      qaStatus: ApprovalStatus.QA_APPROVED,
+      qaApprovedAt: new Date().toISOString(),
+      qaApprovedBy: userId,
+      qaComment: comment
+    };
+    
+    return [200, { approvalItem: approvalItems[itemIndex] }];
+  } catch (error) {
+    console.error('Error approving as QA:', error);
+    return [500, { message: 'Internal server error' }];
+  }
+});
+
+mockAxios.onPost('/api/approvals/qa/reject').reply((config: any) => {
+  try {
+    const { recordId, userId, comment } = JSON.parse(config.data);
+    const userRole = config.headers?.['X-User-Role'] as UserRole;
+    
+    if (!userRole || (userRole !== UserRole.ADMIN && userRole !== UserRole.QA)) {
+      return [403, { message: 'Forbidden - Insufficient permissions' }];
+    }
+    
+    const itemIndex = approvalItems.findIndex(item => item.recordId === recordId);
+    
+    if (itemIndex === -1) {
+      return [404, { message: 'Approval item not found' }];
+    }
+    
+    // Update the item
+    approvalItems[itemIndex] = {
+      ...approvalItems[itemIndex],
+      qaStatus: ApprovalStatus.QA_REJECTED,
+      qaRejectedAt: new Date().toISOString(),
+      qaRejectedBy: userId,
+      qaComment: comment
+    };
+    
+    return [200, { approvalItem: approvalItems[itemIndex] }];
+  } catch (error) {
+    console.error('Error rejecting as QA:', error);
+    return [500, { message: 'Internal server error' }];
+  }
+});
+
+mockAxios.onPost('/api/approvals/steward/approve').reply((config: any) => {
+  try {
+    const { recordId, userId, comment } = JSON.parse(config.data);
+    const userRole = config.headers?.['X-User-Role'] as UserRole;
+    
+    if (!userRole || (userRole !== UserRole.ADMIN && userRole !== UserRole.DATA_STEWARD)) {
+      return [403, { message: 'Forbidden - Insufficient permissions' }];
+    }
+    
+    const itemIndex = approvalItems.findIndex(item => item.recordId === recordId);
+    
+    if (itemIndex === -1) {
+      return [404, { message: 'Approval item not found' }];
+    }
+    
+    // Check if QA approved
+    if (approvalItems[itemIndex].qaStatus !== ApprovalStatus.QA_APPROVED) {
+      return [400, { message: 'Bad Request - Item must be QA approved first' }];
+    }
+    
+    // Update the item
+    approvalItems[itemIndex] = {
+      ...approvalItems[itemIndex],
+      stewardStatus: ApprovalStatus.STEWARD_APPROVED,
+      stewardApprovedAt: new Date().toISOString(),
+      stewardApprovedBy: userId,
+      stewardComment: comment
+    };
+    
+    return [200, { approvalItem: approvalItems[itemIndex] }];
+  } catch (error) {
+    console.error('Error approving as Steward:', error);
+    return [500, { message: 'Internal server error' }];
+  }
+});
+
+mockAxios.onPost('/api/approvals/steward/reject').reply((config: any) => {
+  try {
+    const { recordId, userId, comment } = JSON.parse(config.data);
+    const userRole = config.headers?.['X-User-Role'] as UserRole;
+    
+    if (!userRole || (userRole !== UserRole.ADMIN && userRole !== UserRole.DATA_STEWARD)) {
+      return [403, { message: 'Forbidden - Insufficient permissions' }];
+    }
+    
+    const itemIndex = approvalItems.findIndex(item => item.recordId === recordId);
+    
+    if (itemIndex === -1) {
+      return [404, { message: 'Approval item not found' }];
+    }
+    
+    // Check if QA approved
+    if (approvalItems[itemIndex].qaStatus !== ApprovalStatus.QA_APPROVED) {
+      return [400, { message: 'Bad Request - Item must be QA approved first' }];
+    }
+    
+    // Update the item
+    approvalItems[itemIndex] = {
+      ...approvalItems[itemIndex],
+      stewardStatus: ApprovalStatus.STEWARD_REJECTED,
+      stewardRejectedAt: new Date().toISOString(),
+      stewardRejectedBy: userId,
+      stewardComment: comment
+    };
+    
+    return [200, { approvalItem: approvalItems[itemIndex] }];
+  } catch (error) {
+    console.error('Error rejecting as Steward:', error);
+    return [500, { message: 'Internal server error' }];
+  }
+});
+
+// Service class for approval workflow
+class ApprovalService {
+  // Get all approval queue items
+  async getApprovalQueue(userRole: UserRole, userId: string): Promise<ApprovalQueueItem[]> {
+    try {
+      const response = await axios.get('/api/approvals', {
+        headers: {
+          'X-User-Role': userRole,
+          'X-User-Id': userId
+        }
+      });
+      return response.data.approvalItems;
+    } catch (error) {
+      console.error('Error fetching approval queue:', error);
+      return [];
+    }
+  }
+
+  // Get a specific approval queue item by record ID
+  async getApprovalQueueItemByRecordId(recordId: string, userRole: UserRole, userId: string): Promise<ApprovalQueueItem | null> {
+    try {
+      const response = await axios.get(`/api/approvals/${recordId}`, {
+        headers: {
+          'X-User-Role': userRole,
+          'X-User-Id': userId
+        }
+      });
+      return response.data.approvalItem;
+    } catch (error) {
+      console.error('Error fetching approval item:', error);
+      return null;
+    }
+  }
+
+  // Approve as QA
+  async approveAsQA(recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> {
+    try {
+      const response = await axios.post('/api/approvals/qa/approve', 
+        { recordId, userId, comment },
+        {
+          headers: {
+            'X-User-Role': UserRole.QA,
+            'X-User-Id': userId
+          }
+        }
+      );
+      return response.data.approvalItem;
+    } catch (error) {
+      console.error('Error approving as QA:', error);
+      return null;
+    }
+  }
+
+  // Reject as QA
+  async rejectAsQA(recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> {
+    try {
+      const response = await axios.post('/api/approvals/qa/reject', 
+        { recordId, userId, comment },
+        {
+          headers: {
+            'X-User-Role': UserRole.QA,
+            'X-User-Id': userId
+          }
+        }
+      );
+      return response.data.approvalItem;
+    } catch (error) {
+      console.error('Error rejecting as QA:', error);
+      return null;
+    }
+  }
+
+  // Approve as Data Steward
+  async approveAsSteward(recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> {
+    try {
+      const response = await axios.post('/api/approvals/steward/approve', 
+        { recordId, userId, comment },
+        {
+          headers: {
+            'X-User-Role': UserRole.DATA_STEWARD,
+            'X-User-Id': userId
+          }
+        }
+      );
+      return response.data.approvalItem;
+    } catch (error) {
+      console.error('Error approving as Steward:', error);
+      return null;
+    }
+  }
+
+  // Reject as Data Steward
+  async rejectAsSteward(recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> {
+    try {
+      const response = await axios.post('/api/approvals/steward/reject', 
+        { recordId, userId, comment },
+        {
+          headers: {
+            'X-User-Role': UserRole.DATA_STEWARD,
+            'X-User-Id': userId
+          }
+        }
+      );
+      return response.data.approvalItem;
+    } catch (error) {
+      console.error('Error rejecting as Steward:', error);
+      return null;
+    }
+  }
+
+  // Admin functions
+  async adminApproveAsQA(recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> {
+    try {
+      const response = await axios.post('/api/approvals/qa/approve', 
+        { recordId, userId, comment },
+        {
+          headers: {
+            'X-User-Role': UserRole.ADMIN,
+            'X-User-Id': userId
+          }
+        }
+      );
+      return response.data.approvalItem;
+    } catch (error) {
+      console.error('Error admin approving as QA:', error);
+      return null;
+    }
+  }
+
+  async adminRejectAsQA(recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> {
+    try {
+      const response = await axios.post('/api/approvals/qa/reject', 
+        { recordId, userId, comment },
+        {
+          headers: {
+            'X-User-Role': UserRole.ADMIN,
+            'X-User-Id': userId
+          }
+        }
+      );
+      return response.data.approvalItem;
+    } catch (error) {
+      console.error('Error admin rejecting as QA:', error);
+      return null;
+    }
+  }
+
+  async adminApproveAsSteward(recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> {
+    try {
+      const response = await axios.post('/api/approvals/steward/approve', 
+        { recordId, userId, comment },
+        {
+          headers: {
+            'X-User-Role': UserRole.ADMIN,
+            'X-User-Id': userId
+          }
+        }
+      );
+      return response.data.approvalItem;
+    } catch (error) {
+      console.error('Error admin approving as Steward:', error);
+      return null;
+    }
+  }
+
+  async adminRejectAsSteward(recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> {
+    try {
+      const response = await axios.post('/api/approvals/steward/reject', 
+        { recordId, userId, comment },
+        {
+          headers: {
+            'X-User-Role': UserRole.ADMIN,
+            'X-User-Id': userId
+          }
+        }
+      );
+      return response.data.approvalItem;
+    } catch (error) {
+      console.error('Error admin rejecting as Steward:', error);
+      return null;
+    }
+  }
+}
+
+// Initialize and export service
+const approvalService = new ApprovalService();
+export default approvalService;
+
+// Mock users for approval workflow
+const approvalUsers = [
+  { id: 'user-1001', name: 'John Smith', role: 'Data Analyst' },
+  { id: 'user-1002', name: 'Emily Johnson', role: 'Quality Reviewer' },
+  { id: 'user-1003', name: 'Michael Chen', role: 'Senior Reviewer' },
+  { id: 'user-1004', name: 'Sarah Williams', role: 'Data Manager' },
+  { id: 'user-1005', name: 'Robert Davis', role: 'Department Head' }
+];
+
+// Helper function to get a random user
+const getRandomUser = () => {
+  return approvalUsers[Math.floor(Math.random() * approvalUsers.length)];
+};
+
+// Helper function to calculate a due date (3-7 days from submission)
+const calculateDueDate = (submittedDate: string): string => {
+  const date = new Date(submittedDate);
+  try {
+    // Get all records
+    const records = await getAllRecords();
+    
+    // Map records to approval queue items
+    approvalItems = records.map(record => {
+      // Determine priority based on record name keywords
+      let priority: 'high' | 'medium' | 'low' = 'low';
+      const recordName = record.name.toLowerCase();
+      
+      if (recordName.includes('urgent') || recordName.includes('critical') || recordName.includes('important')) {
+        priority = 'high';
+      } else if (recordName.includes('review') || recordName.includes('check')) {
+        priority = 'medium';
+      }
+      
+      return {
+        id: `approval-${record.id}`,
+        recordId: record.id,
+        recordName: record.name,
+        submittedBy: record.createdBy || 'System',
+        submittedAt: record.createdAt,
+        dueDate: record.dueDate || new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString(), // Default to 7 days from now
+        priority,
+        qaStatus: ApprovalStatus.PENDING,
+        stewardStatus: ApprovalStatus.PENDING
+      };
+    });
+    
+    return approvalItems;
+  } catch (error) {
+    console.error('Error initializing approval queue:', error);
+    return [];
+  }
+};
+
+// Setup mock endpoints
+mockAxios.onGet('/api/approvals').reply(async (config) => {
+  try {
+    const userRole = config.headers?.['X-User-Role'] as UserRole;
+    const userId = config.headers?.['X-User-Id'] as string;
+    
+    if (!userRole) {
+      return [401, { message: 'Unauthorized - Missing role' }];
+    }
+    
+    // Initialize if empty
+    if (approvalItems.length === 0) {
+      await initializeApprovalQueue();
+    }
+    
+    // Filter based on role
+    let filteredItems = [...approvalItems];
+    
+    switch (userRole) {
+      case UserRole.ADMIN:
+        // Admin can see all records
+        break;
+      case UserRole.QA:
+        // QA can see all records
+        break;
+      case UserRole.DATA_STEWARD:
+        // Data Steward can only see QA approved records
+        filteredItems = filteredItems.filter(item => item.qaStatus === ApprovalStatus.QA_APPROVED);
+        break;
+      case UserRole.VIEWER:
+        // Viewer can see all records but with limited actions
+        break;
+      default:
+        return [403, { message: 'Forbidden - Insufficient permissions' }];
+    }
+    
+    return [200, { approvalItems: filteredItems }];
+  } catch (error) {
+    console.error('Error fetching approvals:', error);
+    return [500, { message: 'Internal server error' }];
+  }
+});
+
+mockAxios.onGet(/\/api\/approvals\/\w+/).reply(async (config) => {
+  try {
+    const id = config.url?.split('/').pop();
+    const userRole = config.headers?.['X-User-Role'] as UserRole;
+    
+    if (!userRole) {
+      return [401, { message: 'Unauthorized - Missing role' }];
+    }
+    
+    // Initialize if empty
+    if (approvalItems.length === 0) {
+      await initializeApprovalQueue();
+    }
+    
+    const item = approvalItems.find(item => item.id === id || item.recordId === id);
+    
+    if (!item) {
+      return [404, { message: 'Approval item not found' }];
+    }
+    
+    // Check permissions based on role
+    const permissions = getPermissionsByRole(userRole);
+    
+    if (userRole === UserRole.DATA_STEWARD && item.qaStatus !== ApprovalStatus.QA_APPROVED) {
+      return [403, { message: 'Forbidden - Data Steward can only view QA approved records' }];
+    }
+    
+    return [200, { approvalItem: item }];
+  } catch (error) {
+    console.error('Error fetching approval item:', error);
+    return [500, { message: 'Internal server error' }];
+  }
+});
+
+mockAxios.onPost('/api/approvals/qa/approve').reply((config) => {
+  try {
+    const { recordId, userId, comment } = JSON.parse(config.data);
+    const userRole = config.headers?.['X-User-Role'] as UserRole;
+    
+    if (!userRole || (userRole !== UserRole.ADMIN && userRole !== UserRole.QA)) {
+      return [403, { message: 'Forbidden - Insufficient permissions' }];
+    }
+    
+    const itemIndex = approvalItems.findIndex(item => item.recordId === recordId);
+    
+    if (itemIndex === -1) {
+      return [404, { message: 'Approval item not found' }];
+    }
+    
+    // Update the item
+    approvalItems[itemIndex] = {
+      ...approvalItems[itemIndex],
+      qaStatus: ApprovalStatus.QA_APPROVED,
+      qaApprovedAt: new Date().toISOString(),
+      qaApprovedBy: userId,
+      qaComment: comment
+    };
+    
+    return [200, { approvalItem: approvalItems[itemIndex] }];
+  } catch (error) {
+    console.error('Error approving as QA:', error);
+    return [500, { message: 'Internal server error' }];
+  }
+});
+
+mockAxios.onPost('/api/approvals/qa/reject').reply((config) => {
+  try {
+    const { recordId, userId, comment } = JSON.parse(config.data);
+    const userRole = config.headers?.['X-User-Role'] as UserRole;
+    
+    if (!userRole || (userRole !== UserRole.ADMIN && userRole !== UserRole.QA)) {
+      return [403, { message: 'Forbidden - Insufficient permissions' }];
+    }
+    
+    const itemIndex = approvalItems.findIndex(item => item.recordId === recordId);
+    
+    if (itemIndex === -1) {
+      return [404, { message: 'Approval item not found' }];
+    }
+    
+    // Update the item
+    approvalItems[itemIndex] = {
+      ...approvalItems[itemIndex],
+      qaStatus: ApprovalStatus.QA_REJECTED,
+      qaRejectedAt: new Date().toISOString(),
+      qaRejectedBy: userId,
+      qaComment: comment
+    };
+    
+    return [200, { approvalItem: approvalItems[itemIndex] }];
+  } catch (error) {
+    console.error('Error rejecting as QA:', error);
+    return [500, { message: 'Internal server error' }];
+  }
+});
+
+mockAxios.onPost('/api/approvals/steward/approve').reply((config) => {
+  try {
+    const { recordId, userId, comment } = JSON.parse(config.data);
+    const userRole = config.headers?.['X-User-Role'] as UserRole;
+    
+    if (!userRole || (userRole !== UserRole.ADMIN && userRole !== UserRole.DATA_STEWARD)) {
+      return [403, { message: 'Forbidden - Insufficient permissions' }];
+    }
+    
+    const itemIndex = approvalItems.findIndex(item => item.recordId === recordId);
+    
+    if (itemIndex === -1) {
+      return [404, { message: 'Approval item not found' }];
+    }
+    
+    // Check if QA approved
+    if (approvalItems[itemIndex].qaStatus !== ApprovalStatus.QA_APPROVED) {
+      return [400, { message: 'Bad Request - Item must be approved by QA first' }];
+    }
+    
+    // Update the item
+    approvalItems[itemIndex] = {
+      ...approvalItems[itemIndex],
+      stewardStatus: ApprovalStatus.STEWARD_APPROVED,
+      stewardApprovedAt: new Date().toISOString(),
+      stewardApprovedBy: userId,
+      stewardComment: comment
+    };
+    
+    return [200, { approvalItem: approvalItems[itemIndex] }];
+  } catch (error) {
+    console.error('Error approving as Steward:', error);
+    return [500, { message: 'Internal server error' }];
+  }
+});
+
+mockAxios.onPost('/api/approvals/steward/reject').reply((config) => {
+  try {
+    const { recordId, userId, comment } = JSON.parse(config.data);
+    const userRole = config.headers?.['X-User-Role'] as UserRole;
+    
+    if (!userRole || (userRole !== UserRole.ADMIN && userRole !== UserRole.DATA_STEWARD)) {
+      return [403, { message: 'Forbidden - Insufficient permissions' }];
+    }
+    
+    const itemIndex = approvalItems.findIndex(item => item.recordId === recordId);
+    
+    if (itemIndex === -1) {
+      return [404, { message: 'Approval item not found' }];
+    }
+    
+    // Check if QA approved
+    if (approvalItems[itemIndex].qaStatus !== ApprovalStatus.QA_APPROVED) {
+      return [400, { message: 'Bad Request - Item must be approved by QA first' }];
+    }
+    
+    // Update the item
+    approvalItems[itemIndex] = {
+      ...approvalItems[itemIndex],
+      stewardStatus: ApprovalStatus.STEWARD_REJECTED,
+      stewardRejectedAt: new Date().toISOString(),
+      stewardRejectedBy: userId,
+      stewardComment: comment
+    };
+    
+    return [200, { approvalItem: approvalItems[itemIndex] }];
+  } catch (error) {
+    console.error('Error rejecting as Steward:', error);
+    return [500, { message: 'Internal server error' }];
+  }
+});
+
+// Service functions
+export const getApprovalQueue = async (userRole: UserRole, userId: string): Promise<ApprovalQueueItem[]> => {
+  try {
+    const response = await axios.get('/api/approvals', {
+      headers: {
+        'X-User-Role': userRole,
+        'X-User-Id': userId
+      }
+    });
+    return response.data.approvalItems;
+  } catch (error) {
+    console.error('Error fetching approval queue:', error);
+    return [];
+  }
+};
+
+export const getApprovalQueueItemByRecordId = async (recordId: string, userRole: UserRole, userId: string): Promise<ApprovalQueueItem | null> => {
+  try {
+    const response = await axios.get(`/api/approvals/${recordId}`, {
+      headers: {
+        'X-User-Role': userRole,
+        'X-User-Id': userId
+      }
+    });
+    return response.data.approvalItem;
+  } catch (error) {
+    console.error(`Error fetching approval queue item for record ${recordId}:`, error);
+    return null;
+  }
+};
+
+export const approveAsQA = async (recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> => {
+  try {
+    const response = await axios.post('/api/approvals/qa/approve', {
+      recordId,
+      userId,
+      comment
+    }, {
+      headers: {
+        'X-User-Role': UserRole.QA,
+        'X-User-Id': userId
+      }
+    });
+    return response.data.approvalItem;
+  } catch (error) {
+    console.error(`Error approving record ${recordId} as QA:`, error);
+    return null;
+  }
+};
+
+export const rejectAsQA = async (recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> => {
+  try {
+    const response = await axios.post('/api/approvals/qa/reject', {
+      recordId,
+      userId,
+      comment
+    }, {
+      headers: {
+        'X-User-Role': UserRole.QA,
+        'X-User-Id': userId
+      }
+    });
+    return response.data.approvalItem;
+  } catch (error) {
+    console.error(`Error rejecting record ${recordId} as QA:`, error);
+    return null;
+  }
+};
+
+export const approveAsSteward = async (recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> => {
+  try {
+    const response = await axios.post('/api/approvals/steward/approve', {
+      recordId,
+      userId,
+      comment
+    }, {
+      headers: {
+        'X-User-Role': UserRole.DATA_STEWARD,
+        'X-User-Id': userId
+      }
+    });
+    return response.data.approvalItem;
+  } catch (error) {
+    console.error(`Error approving record ${recordId} as Steward:`, error);
+    return null;
+  }
+};
+
+export const rejectAsSteward = async (recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> => {
+  try {
+    const response = await axios.post('/api/approvals/steward/reject', {
+      recordId,
+      userId,
+      comment
+    }, {
+      headers: {
+        'X-User-Role': UserRole.DATA_STEWARD,
+        'X-User-Id': userId
+      }
+    });
+    return response.data.approvalItem;
+  } catch (error) {
+    console.error(`Error rejecting record ${recordId} as Steward:`, error);
+    return null;
+  }
+};
+
+// Admin functions
+export const adminApproveAsQA = async (recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> => {
+  try {
+    const response = await axios.post('/api/approvals/qa/approve', {
+      recordId,
+      userId,
+      comment
+    }, {
+      headers: {
+        'X-User-Role': UserRole.ADMIN,
+        'X-User-Id': userId
+      }
+    });
+    return response.data.approvalItem;
+  } catch (error) {
+    console.error(`Error admin approving record ${recordId} as QA:`, error);
+    return null;
+  }
+};
+
+export const adminRejectAsQA = async (recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> => {
+  try {
+    const response = await axios.post('/api/approvals/qa/reject', {
+      recordId,
+      userId,
+      comment
+    }, {
+      headers: {
+        'X-User-Role': UserRole.ADMIN,
+        'X-User-Id': userId
+      }
+    });
+    return response.data.approvalItem;
+  } catch (error) {
+    console.error(`Error admin rejecting record ${recordId} as QA:`, error);
+    return null;
+  }
+};
+
+export const adminApproveAsSteward = async (recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> => {
+  try {
+    const response = await axios.post('/api/approvals/steward/approve', {
+      recordId,
+      userId,
+      comment
+    }, {
+      headers: {
+        'X-User-Role': UserRole.ADMIN,
+        'X-User-Id': userId
+      }
+    });
+    return response.data.approvalItem;
+  } catch (error) {
+    console.error(`Error admin approving record ${recordId} as Steward:`, error);
+    return null;
+  }
+};
+
+export const adminRejectAsSteward = async (recordId: string, userId: string, comment?: string): Promise<ApprovalQueueItem | null> => {
+  try {
+    const response = await axios.post('/api/approvals/steward/reject', {
+      recordId,
+      userId,
+      comment
+    }, {
+      headers: {
+        'X-User-Role': UserRole.ADMIN,
+        'X-User-Id': userId
+      }
+    });
+    return response.data.approvalItem;
+  } catch (error) {
+    console.error(`Error admin rejecting record ${recordId} as Steward:`, error);
+    return null;
+  }
+};
+
+// Function to reject a record
+export const rejectRecord = async (recordId: string, comment: string = ''): Promise<boolean> => {
+  try {
+    // In a real application, this would update the database
+    // For now, we'll just log the action
+    console.log(`Rejected record ${recordId} with comment: ${comment}`);
+    return true;
+  } catch (error) {
+    console.error(`Error rejecting record ${recordId}:`, error);
+    return false;
+  }
+};
+
+// Function to forward a record to another level
+export const forwardRecord = async (recordId: string, toLevel: number, comment: string = ''): Promise<boolean> => {
+  try {
+    // In a real application, this would update the database
+    // For now, we'll just log the action
+    console.log(`Forwarded record ${recordId} to level ${toLevel} with comment: ${comment}`);
+    return true;
+  } catch (error) {
+    console.error(`Error forwarding record ${recordId}:`, error);
+    return false;
+  }
+};

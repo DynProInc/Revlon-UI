@@ -1,0 +1,42 @@
+{
+  "processing_error": "Invalid LLM response format for chunk.",
+  "quality_control_requirements": {
+    "title": "Quality Control Requirements",
+    "subtitle": "Closures & Fitments\u2013 Plastic",
+    "defects": {
+      "major": [
+        "Scratched or scuffed exterior negatively impacting the ability to decorate or diminishing surface appearance.",
+        "Prominent flow marks or gassing (ex. bubbles, etc).",
+        "Off-specification surface finish (ex. dyne level, mottled or spotted exterior, rough, etc.)",
+        "Dimples or sink marks.",
+        "Gate debris or flash affecting appearance.",
+        "Staining or soiling.",
+        "Non-blowable foreign matter embedded in or on surface.",
+        "Component not identified with mold cavity number.",
+        "Incomplete, defective or dysfunctional assembly of component parts. (ex. galling, shavings, tears, punctures, ragged edges, scratches, scuffs, etc.)."
+      ],
+      "minor": {
+        "aql_level": "4.0% AQL",
+        "description": "Aesthetic \u2013 will not result in loss of sale",
+        "items": [
+          "Decoration: inadequate or heavy ink lay",
+          "Decoration: slight breaks in copy.",
+          "Decoration: slightly smudged decoration or bleeding.",
+          "Blowable surface foreign matter (ex. dust, corrugated fibers, lint, etc.)."
+        ]
+      }
+    },
+    "approvals": {
+      "created_by": "",
+      "package_engineering_manager": "",
+      "quality_control_director": ""
+    },
+    "revision_history": [
+      "9/04/04 \u2013 New",
+      "12/15/09- Homogenize & update verbiage across all QCR's",
+      "2/25/10- add Fitments",
+      "2/12/2014 \u2013 Updated verbiage and changed to Revlon logo"
+    ],
+    "page_information": "Page 2 of 2"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "annual_report": {
+    "title": "Annual Report 2023",
+    "year": "2023"
+  },
+  "introduction": {
+    "summary": "This document summarizes the fiscal year."
+  },
+  "key_highlights": {
+    "achievements": [
+      "Achieved 20% growth.",
+      "Launched 3 new products."
+    ]
+  },
+  "financial_summary": {
+    "revenue": "$10.5M",
+    "expenses": "$8.2M"
+  },
+  "contact_information": {
+    "email": "info@company.com",
+    "phone": "555-123-4567"
+  },
+  "ft200wv": {
+    "name": "Homopolymer Polypropylene",
+    "description": "z Good Mold Release, Nucleated, Excellent Rigidity and Hardness",
+    "suggested_uses": "Housewares, Caps and Closures, Fast-Cycle Injection Molding",
+    "properties": [
+      {
+        "property": "Nominal Melt Flow Rate (230\u00b0C/2.16kg)",
+        "value": "20",
+        "test_method": "ASTM D1238"
+      },
+      {
+        "property": "Tensile Strength at Yield",
+        "value": "5,600 psi",
+        "test_method": "ASTM D638 (2 in/min, 50 mm/min)"
+      },
+      {
+        "property": "Elongation at Yield",
+        "value": "8%",
+        "test_method": "ASTM D638 (2 in/min, 50 mm/min)"
+      },
+      {
+        "property": "Flexural Modulus",
+        "value": "255,000 psi",
+        "test_method": "ASTM D790A (0.05 in/min, 1.3 mm/min, 1% secant)"
+      },
+      {
+        "property": "Notched Izod Impact Strength at 23\u00b0C",
+        "value": "0.7 ft-lbs/in",
+        "test_method": "ASTM D256A"
+      },
+      {
+        "property": "Heat Deflection Temperature at 66 psi",
+        "value": "257 \u00b0deg F",
+        "test_method": "ASTM D648B"
+      },
+      {
+        "property": "Rockwell Hardness",
+        "value": "104 R",
+        "test_method": "ASTM D785"
+      }
+    ]
+  },
+  "disclaimer": {
+    "text": "Information contained herein is considered accurate to our best knowledge. It is offered for your consideration and investigation, and is not to be construed as a representation or warranty, expressed or implied, for which Braskem assumes legal responsibility."
+  },
+  "contact_info": {
+    "address": "550 Technology Drive",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "zip": "15219",
+    "phone": "1-800-223-8871",
+    "email": "www.braskem.com"
+  }
+}

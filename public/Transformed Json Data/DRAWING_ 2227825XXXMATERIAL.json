@@ -1,0 +1,96 @@
+{
+  "polypropylene": {
+    "product_code": "P4C5T-013",
+    "description": "Homopolymer",
+    "features": "Good processability and antistat",
+    "applications": {
+      "injection_molding": "Rigid Packaging and Housewares"
+    },
+    "properties": [
+      {
+        "property": "Melt Flow Rate",
+        "nominal_value": "20",
+        "si_unit": "g/10 min.",
+        "astm_test_method": "D 1238"
+      },
+      {
+        "property": "Density",
+        "nominal_value": "0.90",
+        "si_unit": "g/cm3",
+        "astm_test_method": "D 1505"
+      },
+      {
+        "property": "Tensile Yield Strength",
+        "nominal_value": "34",
+        "si_unit": "MPa",
+        "nominal_english_value": "5000",
+        "english_unit": "psi",
+        "astm_test_method": "D 638"
+      },
+      {
+        "property": "Yield Elongation",
+        "nominal_value": "9",
+        "si_unit": "%",
+        "nominal_english_value": "9",
+        "english_unit": "%",
+        "astm_test_method": "D 638"
+      },
+      {
+        "property": "Flexural Modulus 1% Secant",
+        "nominal_value": "1240",
+        "si_unit": "MPa",
+        "nominal_english_value": "180",
+        "english_unit": "kpsi",
+        "astm_test_method": "D 790"
+      },
+      {
+        "property": "Flexural Modulus Tangent",
+        "nominal_value": "NA",
+        "astm_test_method": "D 790"
+      }
+    ]
+  },
+  "deflection_temperature": {
+    "value": "93",
+    "unit": "\u00b0C",
+    "fahrenheit_value": "199",
+    "fahrenheit_unit": "\u00b0F",
+    "test_method": "D 648",
+    "conditions": "@ 66 psi (.455 MPa)"
+  },
+  "rockwell_hardness": {
+    "value": "105",
+    "scale": "R",
+    "test_method": "D 785"
+  },
+  "impact_properties": {
+    "notched_izod": {
+      "temperature": "23\u00b0C",
+      "value": "20",
+      "unit": "J/m",
+      "imperial_value": ".4",
+      "imperial_unit": "ft-lb/in",
+      "test_method": "D 256"
+    },
+    "gardner_impact": {
+      "temperature": "23\u00b0C",
+      "value": "6",
+      "unit": "J",
+      "imperial_value": "55",
+      "imperial_unit": "in-lb",
+      "test_method": "D 5420"
+    }
+  },
+  "regulatory": {
+    "fda_compliance": "FDA 21CFR 177.1520 c 1.1",
+    "ul_certification": "UL Certified 94HB",
+    "drug_master_file": true,
+    "date": "Aug-07"
+  },
+  "contact_information": {
+    "address": "118 Huntsman Way, Longview, TX 75602",
+    "telephone": "903-239-5200",
+    "fax": "903-234-0174"
+  },
+  "disclaimer": "The data and information represented herein refer to typical values obtained in our laboratories by the methods or apparatuses indicated, and should be so considered. Since processing variables are a major factor in product performance, this information should serve only as a guide. Since customers' testing conditions are outside our control, the reproducibility of our data in a customer's testing facility is not guaranteed. Customer should confirm results under its testing conditions. There is no implied warranty of merchantability or fitness for a particular purpose. Establishing satisfactory performance of the product for the intended application is the customer's sole responsibility. No warranty is given concerning the existence or non-existence of any patents claiming any pertinent subject matter presented herein. The Company assumes no obligation, express or implied, or liability for use of or reliance on the information and data presented."
+}

@@ -1,0 +1,391 @@
+{
+  "document_info": {
+    "division": "OPEN LINE",
+    "component_sheet_number": "7263067070a",
+    "date": "31.Ago.2021",
+    "page_info": "P\u00c1G: 1 DE 12"
+  },
+  "component": {
+    "name": "TOP SPEED FLD HC FEM 070 NATL BLACK 2020",
+    "change_reason": "NUEVA"
+  },
+  "components_list": [
+    {
+      "product_code": "2058687000",
+      "description": "ETIQ DE SEGURIDAD P/ TINTE FDYL",
+      "quantity": "2.000",
+      "unit": "UN"
+    },
+    {
+      "product_code": "2230062000",
+      "description": "CTN TOP SPEED 12pc 2017",
+      "quantity": "0.083",
+      "unit": "UN"
+    },
+    {
+      "product_code": "2243105170",
+      "description": "TOP SPEED FLD HC FEM 070 NATL BLACK 20",
+      "quantity": "1.000",
+      "unit": "UN"
+    },
+    {
+      "product_code": "2245759000",
+      "description": "TOP SPEED TUBE PE COLORANT 40G 2021",
+      "quantity": "1.000",
+      "unit": "UN"
+    },
+    {
+      "product_code": "5507827000",
+      "description": "TOP SPEED WIP KIT FEMALE 2021",
+      "quantity": "1.000",
+      "unit": "UN"
+    },
+    {
+      "product_code": "4701665001",
+      "description": "REVLON TOP SPEED HC NATURAL BLACK 70",
+      "quantity": "0.040",
+      "unit": "KG"
+    },
+    {
+      "product_code": "5507593000",
+      "description": "TOP SPEED DEVELOPER 40G 2021",
+      "quantity": "1.000",
+      "unit": "UN"
+    }
+  ],
+  "barcode": {
+    "number": "3 09975 03007 5",
+    "description": "ETIQUETA DE IDENTIFICACI\u00d3N CON C\u00d3DIGO DE BARRAS PARA UNIDADES DE EXPEDICI\u00d3N"
+  },
+  "approval_section": {
+    "title": "FIRMAS (CON FECHA)",
+    "signatories": [
+      "ING. DE EMPAQUE",
+      "PRODUCCI\u00d3N",
+      "CONTROL DE CALIDAD",
+      "DISTRIBUCI\u00d3N"
+    ]
+  },
+  "component_information": {
+    "division": "OPEN LINE",
+    "component_number": "7263067070a",
+    "date": "31.Ago.2021",
+    "component_name": "TOP SPEED FLD HC FEM 070 NATL BLACK 2020",
+    "component_sheet_number": "7263067070a"
+  },
+  "handling_instructions": {
+    "warnings": [
+      "AVOID LONG EXPOSURE TO EXCESSIVE HEAT",
+      "AVOID FREEZING",
+      "XXXX"
+    ]
+  },
+  "product_details": {
+    "product_code": "7248341070 / XXXXXXX",
+    "contents": "Contains: 12 Each x",
+    "product_name": "TOP SPEED NATURAL BLACK"
+  },
+  "identification_codes": {
+    "lot_number": "00000000",
+    "order_number": "7248341070",
+    "sap_product_code": "XXXXXXX",
+    "barcode": "17501015904012"
+  },
+  "document_metadata": {
+    "page_information": "P\u00c1G: 2 DE 12",
+    "page_number": "9",
+    "total_pages": "12"
+  },
+  "packaging_specifications": {
+    "pallet_type": "TRATADA TERMICAMENTE DE 40\" X 48\". COLOCAR UN LINER DE CORRUGADO Y PEL\u00cdCULA PL\u00c1STICA EN LA BASE. CENTRAR ELPRODUCTO EN LA TARIMA. COLOCAR ESQUINEROS R\u00cdGIDOS DE FORMA VERTICAL EN CADA ESQUINA Y EMPLAYAR 7-5-6 ABARCANDO LA TARIMA EN EL EMPLAYE. COLOCAR DOS ETIQUETAS MASTER DE TARIMA UNA EN EL CENTRO DE CADA UNA DE LAS CARAS MAS ANGOSTAS DEL PALLET. CUIDAR QUE POR CADA CARA DEL PALLET QUEDE VISIBLE AL MENOS UNA CAJA CON SU ETIQUETA DE IDENTIFICACI\u00d3N CUANDO SEA POSIBLE.",
+    "product_dimensions": {
+      "length": "9.15",
+      "width": "4.917",
+      "height": "16.193",
+      "unit": "cm"
+    },
+    "product_weight": {
+      "weight": "206.767",
+      "unit": "g"
+    },
+    "box_dimensions": {
+      "length": "31",
+      "width": "19.4",
+      "height": "18.2",
+      "unit": "cm"
+    },
+    "box_specifications": {
+      "resistance": "32 ECT",
+      "empty_weight": "238.13 g",
+      "weight_with_product": "2.481 kg"
+    },
+    "pallet_dimensions": {
+      "length": "1.219",
+      "width": "1.02",
+      "height": "1.092",
+      "unit": "m"
+    },
+    "pallet_weight": {
+      "weight": "284.97",
+      "unit": "kg"
+    },
+    "pallet_configuration": {
+      "layers_maximum": "6 CAMAS MAXIMO",
+      "boxes_per_layer": "18",
+      "total_boxes_per_pallet": "108",
+      "total_pieces_per_pallet": "1296"
+    }
+  },
+  "page_information": {
+    "page_number": "7",
+    "total_pages": "12"
+  },
+  "instruction_document": {
+    "title": "INSTRUCCI\u00d3N DE ACONDICIONADO PARA TOP SPEED",
+    "sections": [
+      {
+        "section_number": "1",
+        "title": "Descripci\u00f3n",
+        "content": "TOP SPEED HAIRCOLOR"
+      },
+      {
+        "section_number": "2",
+        "title": "Especificaciones de Llenado",
+        "description": "Los productos con una declaraci\u00f3n de contenido en Peso Neto (NET. WT.) usan los pesos m\u00ednimo y m\u00e1ximo mostrados en este documento:",
+        "specifications": [
+          {
+            "product_type": "TINTE o COLOR",
+            "min_weight": "41.0 g",
+            "max_weight": "42.5 g",
+            "declared_weight": "40 g"
+          },
+          {
+            "product_type": "DESARROLLADOR o PER\u00d3XIDO",
+            "min_weight": "39.3 g",
+            "max_weight": "40.9 g",
+            "declared_weight": "40 g"
+          }
+        ]
+      },
+      {
+        "section_number": "3",
+        "content": "Incluir el Lote en las mordazas de sellado posterior. (Ver punto: Modo de Lotificado m\u00e1s adelante)."
+      }
+    ],
+    "important_notes": [
+      "El n\u00famero de lote que se coloca en el tubo del tinte debe corresponder a la fecha en la que se realice el proceso de llenado del mismo.",
+      "El n\u00famero de lote que se coloca en el tubo del desarrolador debe corresponder al n\u00famero de lote del granel de per\u00f3xido."
+    ],
+    "volume_instructions": {
+      "description": "Incluir la descripci\u00f3n del numero de vol\u00famenes de acuerdo a la tabla de la p\u00e1gina uno",
+      "format": "Lote + triple espacio + numero de volumen",
+      "example": "M 1 9 4 0 6 A _ _ _ 70M"
+    },
+    "page_information": "P\u00c1G: 4 DE 12"
+  },
+  "processing_error": "Invalid LLM response format for chunk.",
+  "tube_conditioning_tests": {
+    "title": "Pruebas al tubo acondicionado:",
+    "tests": [
+      {
+        "parameter": "El sellado del tubo",
+        "frequency": "validar al arranque",
+        "test_interval": "hora",
+        "quantity": "3 piezas",
+        "aql": "0.1",
+        "tolerance": "cero"
+      },
+      {
+        "parameter": "Peso",
+        "frequency": "validar al arranque",
+        "test_interval": "media hora",
+        "quantity": "3 piezas",
+        "aql": "0.1",
+        "tolerance": "no menor al MIN"
+      },
+      {
+        "parameter": "Largo Total",
+        "frequency": "validar al arranque",
+        "test_interval": "media hora",
+        "quantity": "3 piezas",
+        "aql": "1",
+        "tolerance": "147.5 +/- 1.5mm"
+      },
+      {
+        "parameter": "Centrado de sellado",
+        "frequency": "validar al arranque",
+        "test_interval": "constante",
+        "quantity": "1",
+        "aql": "",
+        "tolerance": "+/-1 mm"
+      },
+      {
+        "parameter": "Correcto Lotificado",
+        "frequency": "validar al arranque",
+        "test_interval": "media hora",
+        "quantity": "3 piezas",
+        "aql": "1",
+        "tolerance": "que sea legible"
+      },
+      {
+        "parameter": "Limpieza",
+        "frequency": "validar al arranque",
+        "test_interval": "constante",
+        "quantity": "1",
+        "aql": "",
+        "tolerance": ""
+      },
+      {
+        "parameter": "Refinado ( corte del extremo del tubo )",
+        "frequency": "validar al arranque",
+        "test_interval": "constante",
+        "quantity": "1",
+        "aql": "",
+        "tolerance": "5 +/-1 mm"
+      },
+      {
+        "parameter": "Identificaci\u00f3n de Corrugado",
+        "frequency": "",
+        "test_interval": "por unidad",
+        "quantity": "1",
+        "aql": "",
+        "tolerance": "seg\u00fan especif."
+      },
+      {
+        "parameter": "Cantidad de piezas por corrugado",
+        "frequency": "",
+        "test_interval": "por unidad",
+        "quantity": "1",
+        "aql": "",
+        "tolerance": "12 piezas"
+      },
+      {
+        "parameter": "Correcto estibado",
+        "frequency": "",
+        "test_interval": "por unidad",
+        "quantity": "1",
+        "aql": "",
+        "tolerance": ""
+      },
+      {
+        "parameter": "Paletizaci\u00f3n e Identificaci\u00f3n de Tarima",
+        "frequency": "",
+        "test_interval": "por unidad",
+        "quantity": "1",
+        "aql": "",
+        "tolerance": "seg\u00fan especif."
+      }
+    ],
+    "note": "* Necesario registrar todos resultados de inspecci\u00f3n descritos como parte del control de procesos e incluir un resumen en el COA"
+  },
+  "leak_test": {
+    "title": "PRUEBA DE FUGA EN TUBO:",
+    "procedures": [
+      {
+        "step": "a",
+        "description": "Se deber\u00e1 colocar una bolsa pl\u00e1stica en la l\u00ednea de tal manera que en caso de una fuga, la bolsa contenga el derrame."
+      },
+      {
+        "step": "b",
+        "description": "Cada media hora se tomar\u00e1n 3 tubos y se presionar\u00e1n con una fuerza natural de la mano de las operadoras. Si estos tubos no tienen fuga, se intentar\u00e1 recuperarlos ya que las marcas no deben ser profundas. Se golpear\u00e1n levemente en una superficie plana, si el tubo queda sin marcas se puede reintegrar a producci\u00f3n, de lo contrario se debe destruir completamente y desechar."
+      },
+      {
+        "step": "c",
+        "description": "En paralelo se deber\u00e1 hacer otra prueba destructiva cada 3 horas, donde se deber\u00e1 tomar 1 tubo por la mitad y doblarlo s\u00f3lo a 90\u00b0 para ejercer una presi\u00f3n mayor a la de la prueba anterior ( evitando la subjetividad de la presi\u00f3n por usar un mayor doblez ). Nota: Esta pieza debe ser desechada - NO DEBER\u00c1 REINTEGRARSE A LA PRODUCCI\u00d3N"
+      },
+      {
+        "step": "d",
+        "description": "Por su parte Calidad har\u00e1 un muestreo aleatorio al inicio de la tarima, en medio y al final de \u00e9sta; este muestreo debe realizarse durante la producci\u00f3n de la tarima y sin juntar las muestras al final de tal manera que si el proceso resulta defectivo no sea necesario retrabajar toda la tarima sino s\u00f3lo la parte que corresponda a la muestra que se hubiera identificado con problemas. Nota: El total de muestras a colectar por tarima es de 21 piezas ( 7 + 7 + 7 ) Y el criterio de Calidad de Cero tolerancia. * Aplicar Prueba de Compresi\u00f3n con Dinam\u00f3metro \u2013 M\u00ednimo Aceptable: 25 lb"
+      }
+    ],
+    "contingency_procedure": "En caso de que Producci\u00f3n detecte alguna fuga en sus pruebas de Control ( b y c ) deber\u00e1 avisarle de inmediato al t\u00e9cnico operador de la m\u00e1quina y/o al personal responsable de Mantenimiento para que practiquen el ajuste necesario en la m\u00e1quina, se elimine la fuga y la l\u00ednea vuelva a producir."
+  },
+  "packaging_instructions": {
+    "verification_requirements": "CADA MEDIA HORA Y DEBEN REGISTRARSE LOS RESULTADOS. (LA VERIFICACI\u00d3N DEL C\u00d3DIGO UPC SE REALIZA DE MANERA AUTOM\u00c1TICA EN LA ENCAJILLADORA).",
+    "packaging_steps": [
+      "COLOCAR 2 FILAS CON 6 PIEZAS DE PIE DENTRO DEL CORRUGADO PREVIAMENTE IDENTIFICADO CON LA ETIQUETA CONRRESPONDIENTE DE SAP \u2013 PREPARADA BAJO EL AMBIENTE EN INGL\u00c9S DEL SISTEMA SAP PARA OBTENER LAS LAYENDAS EN ESE IDIOMA \u2013 Y FINALMENTE ACOMODAR LOS CORRUGADOS SIGUIENDO LA INSTRUCCI\u00d3N ADJUNTA DEL PALETIZADO.",
+      "EL CORRUGADO LLENO SE CIERRA CON CINTA TRANSPARENTE (SIN LOGOTIPO ALGUNO) SE ETIQUETA COMO SE MUESTRA ENSEGUIDA Y SE ESTIBA SOBRE TARIMA DE MADERA TRATADA DE 48\u2033 X 40\u2033 COMO SE INDICA EN LA P\u00c1GINA 2."
+    ],
+    "notes": "Las im\u00e1genes mostradas en este Instructivo de Acondicionado son s\u00f3lo de referencia para el usuario. Cada TONO de producto tiene cajillas, claves, c\u00f3digos y descripciones propios (que pueden diferir de los que aparecen en aqu\u00ed), ver la tabla anexa en la p\u00e1g. 1 para consultar el c\u00f3digo de cada tono."
+  },
+  "instructivo_etiqueta_identificacion": {
+    "title": "ANEXO Instructivo etiqueta de identificaci\u00f3n.",
+    "formato_lote": "Maamdd*",
+    "etiqueta_ejemplo": {
+      "informacion_producto": [
+        "XXXX",
+        "AVOID LONG EXPOSURE TO EXCESSIVE HEAT",
+        "AVOID FREEZING",
+        "12 Each x NA",
+        "XXXXXXXXXX / XXXXXXX"
+      ],
+      "descripcion": "Descripcion del producto",
+      "campos": [
+        "(Clave de producto/ Numero de Lote)",
+        "(N\u00famero de Lote)",
+        "(N\u00famero de Orden)",
+        "(Clave de Producto SAP)",
+        "(Codigo GTIN)"
+      ]
+    },
+    "explicacion_formato": {
+      "donde": "Donde:",
+      "componentes": [
+        "M lndica el pafs productor, Mexico.",
+        "a a Son las 2 ultimas dfgitos de/ afio de acondicionado.",
+        "m Representa el mes en que se realiza el acondicionado. Nata : Para las primeros nueve meses de/ afio se usan /os dfgitos de/ 1 o/ 9, para octubre se usa la tetra \"X'; para noviembre la \"Y\" y para diciembre la \"Z\" (todas el/as en mayuscu/os).",
+        "d d Son /os dos dfgitos de/ dfa def mes."
+      ],
+      "uso_letra_secuencial": "* Sena/a, con ayuda de una tetra asignada en secuencia alfabetica, distintos /ates de/mismo producto emp/eados y/o acondicionados en el mismo dfa; de ta/ forma que si en un so/a dfa se 1/egan a manejar 2 o mas totes independientes def mismo producto, al primero se le asigna la tetra '' '; en tanto que al segundo la tetra \"B\" y asi sucesivamente (empleando siempre mayusculas).",
+      "ejemplo": {
+        "descripcion": "Ejemplo: Para el segundo late de/ dfa 15 de/ mes de mayo de 2011 preparado en Mexico, el late se integra de la siguiente forma:",
+        "lote": "M11515B"
+      }
+    }
+  },
+  "metadata": {
+    "pagina": "P\u00c1G: 10 de 12"
+  },
+  "procedimiento_estandar_operativo": {
+    "titulo": "Requerimientos de tarima",
+    "apendice": "Tarimas tratadas t\u00e9rmicamente",
+    "fecha_emision": "15/01/2021",
+    "revision": "Rev 6",
+    "notas_revision": "Se actualizan sellos"
+  },
+  "requerimiento_de_tarimas": {
+    "especificaciones": [
+      "Todas las producciones deben ser colocadas en tarima est\u00e1ndar 48\u2033 x 40\u2033 GMA #1 Grado A (Tarima de exportacion)",
+      "Dimensiones 1.22 m largo x 1.02 m de ancho",
+      "4-entradas",
+      "3 largueros",
+      "15 mm m\u00ednimo de espesor de tabla",
+      "M\u00ednimo 7 tablas en el tendido superior",
+      "M\u00ednimo 5 tablas en el tendido inferior",
+      "No deben existir tablas faltantes, rotas o insertos adicionales en la tarima (Revlon podre levantar multas por el uso de tarimas fuera de est\u00e1ndar)."
+    ],
+    "requisitos_adicionales": [
+      "Cada tarima debe de ser tratada t\u00e9rmicamente, y debe de estar marcada con la marca de IPPC, la cual muestra que esta tarima paso por el tratamiento",
+      "La altura m\u00e1xima de la estiba es de 1.32 m, incluyendo la altura de la tarima (a menos que se indique otra forma expl\u00edcitamente en la especificaci\u00f3n del producto)",
+      "Para estiba con un peso superior a 860 kg, se deben de considerar esquineros en cada una de las cuatro esquina de la estiba et",
+      "Ninguna parte de la caja corrugada puede quedar fuera de la tarima"
+    ]
+  },
+  "sellos_aprobados": {},
+  "requerimiento_identificacion_de_pallet": {
+    "instrucciones": "Colocar la etiqueta de pallet en la esquina superior del palletizado"
+  },
+  "informacion_documento": {
+    "pagina": "12 de 12"
+  },
+  "requerimientos": {
+    "especificaciones": "Las tarimas deber\u00e1n ser de color blanco (color natural), no se recibir\u00e1n tarimas de tac\u00f3n o en mal estado, con clavos expuestos, tablas rotas, incompletas, sucias o podridas. Deben asegurar ausencia de hongo, de insectos as\u00ed como orificios que indiquen presencia de barrenadores."
+  },
+  "tipos_tarimas": {
+    "permitidas": "TARIMA PERMITIDA",
+    "no_permitidas": [
+      "TARIMA DE TACON NO PERMITIDA",
+      "TARIMA ROTA, SUCIA, CON HONGO, INSECTOS O INDICIOS DE PLAGA Y BARRENADORES NO PERMITIDA"
+    ]
+  }
+}

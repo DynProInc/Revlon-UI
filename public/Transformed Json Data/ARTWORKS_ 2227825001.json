@@ -1,0 +1,262 @@
+{
+  "material_safety_data_sheet": {
+    "document_type": "NFPA Material Safety Data Sheet",
+    "classification": {
+      "hmis": "HMIS",
+      "ppe": "PPE"
+    },
+    "revision_information": {
+      "date": "10/04/2011",
+      "number": "17"
+    }
+  },
+  "product_and_company_identification": {
+    "product_description": "62,453HCPP PINK 50:1",
+    "description": "POLYPROPYLENE COMPOUND",
+    "item_number": "0986096",
+    "appearance_and_odor": "PELLETS, FAINT ODOR",
+    "manufacturer": {
+      "name": "Teknor Color Company",
+      "address": "505 Central Avenue",
+      "city_state_zip": "Pawtucket, RI  02861",
+      "telephone": "401-725-8000"
+    }
+  },
+  "hazards_identification": {
+    "emergency_overview": "This product contains no substances in their given form that are considered hazardous to health.",
+    "appearance_and_odor": "PELLETS, FAINT ODOR",
+    "potential_health_effects": {
+      "principle_routes_of_exposure": "None reasonably foreseeable.",
+      "acute_effects": {
+        "eyes": "May cause slight irritation",
+        "skin": "Substance may cause slight skin irritation.",
+        "inhalation": "May cause irritation of respiratory tract.",
+        "ingestion": "May be harmful if swallowed."
+      },
+      "chronic_effects": "None reasonably foreseeable",
+      "additional_information": "See Section 11 for additional Toxicological information.",
+      "aggravated_medical_conditions": "No information available",
+      "potential_environmental_effects": "See Section 12 for additional Ecological information"
+    }
+  },
+  "page_information": {
+    "page_number": "1 / 7"
+  },
+  "composition_information_on_ingredients": {
+    "general_note": "All ingredients are encapsulated by the polymer which greatly reduces the potential for employee exposure to hazardous chemicals",
+    "hazardous_components": [
+      {
+        "component": "TITANIUM DIOXIDE",
+        "cas_no": "13463-67-7",
+        "weight_percentage": "30 - 35"
+      },
+      {
+        "component": "BARIUM SULFATE",
+        "cas_no": "7727-43-7",
+        "weight_percentage": "< 5"
+      }
+    ]
+  },
+  "first_aid_measures": {
+    "skin_contact": "Wash off with warm water and soap",
+    "eye_contact": "Flush eyes with water at least 15 minutes. Get medical attention if eye irritation develops or persists.",
+    "inhalation": "If breathing is difficult, remove victim to fresh air and keep at rest in a position comfortable for breathing.",
+    "ingestion": "Clean mouth with water and afterwards drink plenty of water",
+    "notes_to_physician": "Treat symptomatically",
+    "protection_of_first_aiders": "Use personal protective equipment"
+  },
+  "fire_fighting_measures": {
+    "suitable_extinguishing_media": "Use extinguishing measures that are appropriate to local circumstances and the surrounding environment",
+    "uniform_fire_code": "No information available",
+    "unsuitable_extinguishing_media": "No information available",
+    "hazardous_combustion_products": "CO, CO2, Aldehydes, Organic Vapors.",
+    "impact_sensitivity": "No information available",
+    "sensitivity_to_static_discharge": "No information available",
+    "specific_hazards": "Thermal decomposition can lead to release of irritating gases and vapours",
+    "protective_equipment": "As in any fire, wear self-contained breathing apparatus pressure-demand, MSHA/NIOSH (approved or equivalent) and full protective gear"
+  },
+  "nfpa_ratings": {
+    "health": "0",
+    "flammability": "1",
+    "instability": "0"
+  },
+  "accidental_release_measures": {
+    "personal_precautions": "Use personal protective equipment.",
+    "environmental_precautions": "Prevent further leakage or spillage if safe to do so"
+  },
+  "document_info": {
+    "id": "0986096",
+    "revision_date": "10/04/2011",
+    "product": "62,453HCPP PINK 50:1",
+    "page_number": "3 / 7",
+    "product_code": "62,453HCPP PINK 50:1",
+    "reference_number": "0986096"
+  },
+  "containment_and_cleanup": {
+    "methods_for_containment": "Prevent spreading over a wide area (e.g. by containment or oil barriers)",
+    "methods_for_cleaning_up": "Clean up promptly by scoop or vacuum"
+  },
+  "handling_and_storage": {
+    "handling": "Handle in accordance with good industrial hygiene and safety practice",
+    "storage": "Keep containers tightly closed in a dry, cool and well-ventilated place"
+  },
+  "exposure_controls_personal_protection": {
+    "exposure_guidelines": {
+      "components": [
+        {
+          "name": "TITANIUM DIOXIDE",
+          "acgih_tlv": "TWA: 10 mg/m3",
+          "osha_pel": "TWA: 10 mg/m3 TWA: 15 mg/m3",
+          "ontario_twaev": "TWA: 10 mg/m3",
+          "mexico_oel_twa": "TWA: 10 mg/m3 STEL: 20 mg/m3",
+          "niosh_idlh": "5000 mg/m3"
+        },
+        {
+          "name": "BARIUM SULFATE",
+          "acgih_tlv": "TWA: 10 mg/m3 TWA: 0.5 mg/m3",
+          "osha_pel": "TWA: 10 mg/m3 TWA: 5 mg/m3 TWA: 15 mg/m3",
+          "ontario_twaev": "TWA: 10 mg/m3",
+          "mexico_oel_twa": "TWA: 0.5 mg/m3"
+        }
+      ],
+      "idlh_definition": "IDLH = Immediately Dangerous to Life or Health"
+    },
+    "engineering_measures": "Ensure adequate ventilation",
+    "personal_protective_equipment": {
+      "eye_face_protection": "Safety glasses with side-shields",
+      "skin_protection": "Wear protective gloves/clothing",
+      "respiratory_protection": "When workers are facing concentrations above the exposure limit they must use appropriate certified respirators",
+      "general_hygiene_considerations": "Handle in accordance with good industrial hygiene and safety practice"
+    }
+  },
+  "physical_and_chemical_properties": {
+    "appearance_and_odor": "PELLETS, FAINT ODOR",
+    "physical_state": "Solid",
+    "flash_point": "No information available",
+    "ph": "No information available",
+    "autoignition_temperature": "No information available",
+    "vapour_pressure": "No information available",
+    "specific_gravity": "No information available",
+    "solubility": "No information available",
+    "viscosity": "No information available",
+    "molecular_weight": "No information available.",
+    "density": "No information available.",
+    "voc_content_percent": "No information available"
+  },
+  "stability_and_reactivity": {
+    "chemical_stability": "Stable under normal conditions",
+    "conditions_to_avoid": "To avoid thermal decomposition, do not overheat.",
+    "incompatible_products": "Flourine, Strong oxidizing agents",
+    "hazardous_decomposition_products": "CO, CO2, Aldehydes, Organic Vapors",
+    "possibility_of_hazardous_reactions": "None under normal processing"
+  },
+  "toxicological_information": {
+    "acute_toxicity": {
+      "product_information": "",
+      "corrosivity": "No information available",
+      "irritation": "No information available",
+      "sensitization": "No information available"
+    },
+    "component_information": "No information available",
+    "chronic_toxicity": {
+      "product_information": "",
+      "mutagenic_effects": "No information available",
+      "developmental_effects": "No information available",
+      "teratogenicity": "No information available",
+      "reproductive_effects": "No information available",
+      "target_organ_effects": "No information available",
+      "product_carcinogenicity": "No information available."
+    },
+    "carcinogenicity": {
+      "component_information": "No information available",
+      "description": "When displayed, the table below indicates whether each agency has listed any ingredient as a carcinogen. If no table is shown, there are no known carcinogenic chemicals in this product",
+      "carcinogen_listings": [
+        {
+          "component": "TITANIUM DIOXIDE",
+          "acgih": "",
+          "iarc": "Group 2B",
+          "ntp": "",
+          "osha": "",
+          "mexico": ""
+        }
+      ]
+    }
+  },
+  "document_metadata": {
+    "revision_date": "10/04/2011",
+    "product_code": "62,453HCPP PINK 50:1",
+    "reference_number": "0986096",
+    "page_number": "6 / 7",
+    "document_number": "0986096",
+    "product_identifier": "62,453HCPP PINK 50:1"
+  },
+  "ecological_information": {
+    "product_ecotoxicity": "No information available",
+    "component_information": "No information available"
+  },
+  "disposal_considerations": {
+    "waste_disposal_methods": "Dispose of in accordance with local, state and federal regulations",
+    "contaminated_packaging": "Dispose of in accordance with local, state and federal regulations",
+    "us_epa_waste_number": "No information available"
+  },
+  "transport_information": {
+    "dot": "Transport in accordance with State, Federal, and International regulations. Not regulated by DOT.",
+    "tdg": "Transport in accordance with State, Federal, and International regulations",
+    "mex": "Transport in accordance with State, Federal, and International regulations",
+    "icao": "Transport in accordance with State, Federal, and International regulations",
+    "iata": "Transport in accordance with State, Federal, and International regulations",
+    "imdg_imo": "Transport in accordance with State, Federal, and International regulations"
+  },
+  "regulatory_information": {
+    "international_inventories": "All components in this product are on or are exempt from listing on the US TSCA Inventory and the Canadian DSL Inventory.",
+    "us_federal_regulations": {
+      "sara_313": "Section 313 of Title III of the Superfund Amendments and Reauthorization Act of 1986 (SARA). This product does not contain any chemicals which are subject to the reporting requirements of the Act and Title 40 of the Code of Federal Regulations, Part 372.",
+      "sara_311_312_hazardous_categorization": {
+        "chronic_health_hazard": "No",
+        "acute_health_hazard": "No"
+      }
+    }
+  },
+  "hazard_information": {
+    "fire_hazard": "No",
+    "sudden_release_of_pressure_hazard": "No",
+    "reactive_hazard": "No"
+  },
+  "environmental_regulations": {
+    "clean_water_act": "There are no chemicals in this product that are subject to the Clean Water Act.",
+    "cercla": "There are no chemicals in this product that are subject to CERCLA."
+  },
+  "us_state_regulations": {
+    "california_proposition_65": "This product does not contain any Proposition 65 chemicals."
+  },
+  "international_regulations": {
+    "rohs": "This compound complies with the EU RoHS Directive (2002/95/EC) and does not contain any restricted materials above threshold levels. The RoHS directive restricts the use of Lead, Cadmium, Chrome VI, Mercury, PBBs and all PBDE materials (including Deca-BDE).",
+    "european_reach": "This product does not contain any SVHCs",
+    "mexico_grade": "No information available",
+    "canada": {
+      "compliance_statement": "This product has been classified in accordance with the hazard criteria of the Controlled Products Regulations (CPR) and the MSDS contains all the information required by the CPR.",
+      "whmis_hazard_class": "Not determined"
+    }
+  },
+  "other_information": {
+    "revision_summary": "No information available"
+  },
+  "product_information": {
+    "product_name": "HCPP PINK 50:1",
+    "product_code": "62,453",
+    "reference_number": "0986096",
+    "revision_date": "10/04/2011"
+  },
+  "document_information": {
+    "id": "0986096",
+    "revision_date": "10/04/2011",
+    "product": "62,453HCPP PINK 50:1"
+  },
+  "disclaimer": {
+    "content": "To the best of our knowledge, the information contained herein is correct and accurate but does not purport to be all inclusive and shall be used only as a guide. The information relates only to the specific material designated. Teknor Apex, nor any of it subsidiaries, assumes any liability whatsoever for the accuracy or completeness of the information contained herein. Teknor Apex Company warrants only that the goods sold shall conform to Teknor Apex Company's standard specifications or such other mutually agreed-to and documented specification. This express warranty is in lieu of and excludes all other express warranties and is extended only to Buyer. TEKNOR APEX COMPANY EXPRESSLY DISCLAIMS ALL OTHER WARRANTIES INCLUDING THE WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE AND MAKES NO WARRANTY AS TO THE RESULTS BUYER CAN EXPECT FROM BUYER'S USE OF THE GOODS. No employee or agent of Teknor Apex Company is authorized to make warranties about goods sold by Teknor Apex Company, and Buyer should not rely on any oral or written communications from employees or agents of Teknor Apex Company that purport to constitute a warranty. Any assistance furnished by Teknor Apex Company in the selection of goods or suggestions as to their processing or use are accepted by Buyer at Buyer's own risk, and Teknor Apex Company shall not be liable to Buyer for results obtained by Buyer from such assistance or suggestions. In no event and under no circumstances will Teknor Apex Company be liable for consequential damages of any kind."
+  },
+  "document_footer": {
+    "end_statement": "End of MSDS",
+    "page_information": "Page 7 / 7"
+  }
+}

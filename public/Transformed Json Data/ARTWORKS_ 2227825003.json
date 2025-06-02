@@ -1,0 +1,228 @@
+{
+  "material_safety_data_sheet": {
+    "document_type": "NFPA Material Safety Data Sheet",
+    "classification": {
+      "hmis": "HMIS",
+      "ppe": "PPE"
+    },
+    "revision_information": {
+      "date": "20-Jun-2012",
+      "number": "13"
+    }
+  },
+  "product_and_company_identification": {
+    "product_description": "70,684HCPP ORANGE 50:1",
+    "description": "POLYPROPYLENE COMPOUND",
+    "item_number": "0986095",
+    "appearance_and_odor": "PELLETS, FAINT ODOR",
+    "manufacturer": {
+      "name": "Teknor Color Company",
+      "address": "505 Central Avenue",
+      "city_state_zip": "Pawtucket, RI  02861",
+      "telephone": "401-725-8000"
+    }
+  },
+  "hazards_identification": {
+    "emergency_overview": "This product contains no substances in their given form that are considered hazardous to health.",
+    "appearance_and_odor": "PELLETS, FAINT ODOR",
+    "potential_health_effects": {
+      "principle_routes_of_exposure": "None reasonably foreseeable.",
+      "acute_effects": {
+        "eyes": "May cause slight irritation",
+        "skin": "Substance may cause slight skin irritation.",
+        "inhalation": "May cause irritation of respiratory tract.",
+        "ingestion": "May be harmful if swallowed."
+      },
+      "chronic_effects": "None reasonably foreseeable",
+      "additional_information": "See Section 11 for additional Toxicological information.",
+      "aggravated_medical_conditions": "No information available",
+      "potential_environmental_effects": "See Section 12 for additional Ecological information"
+    }
+  },
+  "page_information": {
+    "page_number": "1 / 6"
+  },
+  "composition_information_on_ingredients": {
+    "description": "All ingredients are encapsulated by the polymer which greatly reduces the potential for employee exposure to hazardous chemicals"
+  },
+  "first_aid_measures": {
+    "skin_contact": "Wash off with warm water and soap",
+    "eye_contact": "Flush eyes with water at least 15 minutes. Get medical attention if eye irritation develops or persists.",
+    "inhalation": "If breathing is difficult, remove victim to fresh air and keep at rest in a position comfortable for breathing",
+    "ingestion": "Clean mouth with water and afterwards drink plenty of water",
+    "notes_for_the_doctor": "Treat symptomatically",
+    "protection_of_first_aiders": "Use personal protective equipment"
+  },
+  "fire_fighting_measures": {
+    "suitable_extinguishing_media": "Use extinguishing measures that are appropriate to local circumstances and the surrounding environment",
+    "uniform_fire_code": "No information available",
+    "unsuitable_extinguishing_media": "No information available",
+    "hazardous_combustion_products": "CO, CO2, Aldehydes, Organic Vapors.",
+    "impact_sensitivity": "No information available",
+    "sensitivity_to_static_discharge": "No information available",
+    "hazards_from_the_substance_or_mixture": "Thermal decomposition can lead to release of irritating gases and vapours",
+    "advice_for_firefighters": "As in any fire, wear self-contained breathing apparatus pressure-demand, MSHA/NIOSH (approved or equivalent) and full protective gear",
+    "nfpa": {
+      "health": "0",
+      "flammability": "1",
+      "instability": "0"
+    }
+  },
+  "accidental_release_measures": {
+    "for_non_emergency_personnel": "Use personal protective equipment.",
+    "environmental_precautions": "Prevent further leakage or spillage if safe to do so",
+    "methods_and_materials_for_containment_and_cleaning_up": "Prevent spreading over a wide area (e.g. by containment or oil barriers)",
+    "methods_for_cleaning_up": "Clean up promptly by scoop or vacuum"
+  },
+  "document_metadata": {
+    "product_id": "0986095",
+    "product_name": "70,684HCPP ORANGE 50:1",
+    "revision_date": "20-Jun-2012",
+    "page_number": "5 / 6",
+    "page_information": "Page 6 / 6",
+    "document_type": "SDS"
+  },
+  "handling_and_storage": {
+    "precautions_for_safe_handling": "Handle in accordance with good industrial hygiene and safety practice",
+    "conditions_for_safe_storage": "Keep containers tightly closed in a dry, cool and well-ventilated place"
+  },
+  "exposure_controls_personal_protection": {
+    "exposure_guidelines": "IDLH = Immediately Dangerous to Life or Health",
+    "engineering_measures": "Ensure adequate ventilation",
+    "personal_protective_equipment": {
+      "eye_face_protection": "Safety glasses with side-shields",
+      "skin_protection": "Wear protective gloves/clothing",
+      "respiratory_protection": "When workers are facing concentrations above the exposure limit they must use appropriate certified respirators"
+    },
+    "general_hygiene_considerations": "Handle in accordance with good industrial hygiene and safety practice"
+  },
+  "physical_and_chemical_properties": {
+    "appearance_and_odor": "PELLETS, FAINT ODOR",
+    "physical_state": "Solid",
+    "flash_point": "No information available",
+    "ph_value": "No information available",
+    "autoignition_temperature": "No information available",
+    "vapour_pressure": "No information available",
+    "specific_gravity": "No information available",
+    "solubility": "No information available.",
+    "viscosity": "No information available.",
+    "molecular_weight": "No information available.",
+    "density": "No information available.",
+    "voc_content_percent": "No information available"
+  },
+  "stability_and_reactivity": {
+    "chemical_stability": "Stable under normal conditions",
+    "conditions_to_avoid": "To avoid thermal decomposition, do not overheat.",
+    "incompatible_materials": "Flourine, Strong oxidizing agents",
+    "hazardous_decomposition_products": "CO, CO2, Aldehydes, Organic Vapors"
+  },
+  "document_info": {
+    "product": "HCPP ORANGE 50:1",
+    "product_code": "0986095",
+    "revision_date": "20-Jun-2012",
+    "page_number": "3 / 6"
+  },
+  "hazardous_reactions": {
+    "possibility": "None under normal processing"
+  },
+  "toxicological_information": {
+    "acute_toxicity": {
+      "product_information": {
+        "corrosivity": "No information available",
+        "irritation": "No information available",
+        "sensitisation": "No information available"
+      },
+      "component_information": "No information available"
+    },
+    "chronic_toxicity": {
+      "product_information": {
+        "germ_cell_mutagenicity_genotoxicity": "No information available",
+        "developmental_effects": "No information available",
+        "teratogenicity": "No information available",
+        "reproductive_toxicity": "No information available",
+        "target_organ_effects": "No information available",
+        "product_carcinogenicity": "No information available."
+      },
+      "component_information": "No information available",
+      "carcinogenicity": "When displayed, the table below indicates whether each agency has listed any ingredient as a carcinogen. If no table is shown, there are no known carcinogenic chemicals in this product"
+    }
+  },
+  "ecological_information": {
+    "product_ecotoxicity": "No information available",
+    "component_information": "No information available"
+  },
+  "disposal_considerations": {
+    "waste_disposal_methods": "Dispose of in accordance with local, state and federal regulations",
+    "contaminated_packaging": "Dispose of in accordance with local, state and federal regulations",
+    "us_epa_waste_number": "No information available"
+  },
+  "transport_information": {
+    "dot": {
+      "description": "Transport in accordance with State, Federal, and International regulations. Not regulated by DOT."
+    },
+    "tdg": {
+      "description": "Not regulated by TDG"
+    },
+    "mex": {
+      "description": "Not regulated by MEX"
+    },
+    "air_transport": {
+      "icao_ti": "Not regulated by ICAO"
+    },
+    "sea_transport": {
+      "imdg": "Not regulated by IMDG/IMO"
+    }
+  },
+  "regulatory_information": {
+    "international_inventories": {
+      "description": "All components in this product are on or are exempt from listing on the US TSCA Inventory and the Canadian DSL Inventory."
+    },
+    "us_federal_regulations": {
+      "sara_313": {
+        "description": "Section 313 of Title III of the Superfund Amendments and Reauthorization Act of 1986 (SARA). This product does not contain any chemicals which are subject to the reporting requirements of the Act and Title 40 of the Code of Federal Regulations, Part 372."
+      },
+      "sara_311_312_hazardous_categorization": {
+        "chronic_health_hazard": "No",
+        "acute_health_hazard": "No",
+        "fire_hazard": "No",
+        "sudden_release_of_pressure_hazard": "No",
+        "reactive_hazard": "No"
+      },
+      "clean_water_act": {
+        "description": "There are no chemicals in this product that are subject to the Clean Water Act."
+      },
+      "cercla": {
+        "description": "There are no chemicals in this product that are subject to CERCLA."
+      }
+    },
+    "us_state_regulations": {
+      "california_proposition_65": {
+        "description": "This product does not contain any Proposition 65 chemicals."
+      }
+    },
+    "international_regulations": {
+      "rohs": {
+        "compliance": "This compound complies with the EU RoHS Directive (2011/65/EU) and does not contain any restricted materials above threshold levels.",
+        "details": "The RoHS directive restricts the use of Lead, Cadmium, Chrome VI, Mercury, PBBs and all PBDE materials (including Deca-BDE)."
+      },
+      "reach": {
+        "compliance": "As formulated, this product does not contain any SVHCs"
+      },
+      "mexico_grade": "No information available",
+      "canada": {
+        "classification": "This product has been classified in accordance with the hazard criteria of the Controlled Products Regulations (CPR) and the MSDS contains all the information required by the CPR.",
+        "whmis_hazard_class": "Not determined"
+      }
+    }
+  },
+  "product_information": {
+    "product_name": "HCPP ORANGE 50:1",
+    "product_code": "70,684",
+    "reference_number": "0986095",
+    "revision_date": "20-Jun-2012"
+  },
+  "other_information": {
+    "revision_summary": "No information available",
+    "disclaimer": "To the best of our knowledge, the information contained herein is correct and accurate but does not purport to be all inclusive and shall be used only as a guide. The information relates only to the specific material designated. Teknor Apex, nor any of it subsidiaries, assumes any liability whatsoever for the accuracy or completeness of the information contained herein. Teknor Apex Company warrants only that the goods sold shall conform to Teknor Apex Company's standard specifications or such other mutually agreed-to and documented specification. This express warranty is in lieu of and excludes all other express warranties and is extended only to Buyer. TEKNOR APEX COMPANY EXPRESSLY DISCLAIMS ALL OTHER WARRANTIES INCLUDING THE WARRANTY OF FITNESS FOR A PARTICULAR PURPOSE AND MAKES NO WARRANTY AS TO THE RESULTS BUYER CAN EXPECT FROM BUYER'S USE OF THE GOODS. No employee or agent of Teknor Apex Company is authorized to make warranties about goods sold by Teknor Apex Company, and Buyer should not rely on any oral or written communications from employees or agents of Teknor Apex Company that purport to constitute a warranty. Any assistance furnished by Teknor Apex Company in the selection of goods or suggestions as to their processing or use are accepted by Buyer at Buyer's own risk, and Teknor Apex Company shall not be liable to Buyer for results obtained by Buyer from such assistance or suggestions. In no event and under no circumstances will Teknor Apex Company be liable for consequential damages of any kind."
+  }
+}
