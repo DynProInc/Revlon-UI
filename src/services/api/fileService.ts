@@ -41,8 +41,9 @@ export const getPDFFileUrl = (filename: string): string => {
     return cleanFilename;
   }
   
-  // Return the URL to the file in the public folder
-  return `/Source Data/${encodeURIComponent(cleanFilename)}`;
+  // Return the URL to the file in the public folder with basePath
+  // Use the basePath from next.config.js
+  return `/revlon-ui/Source Data/${encodeURIComponent(cleanFilename)}`;
 };
 
 // Helper function to normalize filenames
@@ -100,7 +101,7 @@ export const getJSONFileContent = async (filename: string): Promise<any> => {
   try {
     // First, try the exact filename with .json extension (preserving spaces)
     const exactFilename = filename.replace('.pdf', '.json');
-    const exactPath = `/Transformed Json Data/${encodeURIComponent(exactFilename)}`;
+    const exactPath = `/revlon-ui/Transformed Json Data/${encodeURIComponent(exactFilename)}`;
     console.log(`Attempting to fetch JSON with exact filename: ${exactPath}`);
     
     // Array of paths to try in order
@@ -108,11 +109,13 @@ export const getJSONFileContent = async (filename: string): Promise<any> => {
       // 1. Exact filename with .json extension
       exactPath,
       // 2. Normalized filename (using our mapping function)
-      `/Transformed Json Data/${encodeURIComponent(normalizeFilename(filename))}`,
+      `/revlon-ui/Transformed Json Data/${encodeURIComponent(normalizeFilename(filename))}`,
+
       // 3. Normalized filename without encoding
-      `/Transformed Json Data/${normalizeFilename(filename)}`,
+      `/revlon-ui/Transformed Json Data/${normalizeFilename(filename)}`,
+
       // 4. Original filename with .json extension without encoding
-      `/Transformed Json Data/${exactFilename}`
+      `/revlon-ui/Transformed Json Data/${exactFilename}`
     ];
     
     let response = null;
@@ -156,7 +159,7 @@ export const getJSONFileRawContent = async (filename: string): Promise<string> =
   try {
     // First, try the exact filename with .json extension (preserving spaces)
     const exactFilename = filename.replace('.pdf', '.json');
-    const exactPath = `/Transformed Json Data/${encodeURIComponent(exactFilename)}`;
+    const exactPath = `/revlon-ui/Transformed Json Data/${encodeURIComponent(exactFilename)}`;
     console.log(`Attempting to fetch raw JSON with exact filename: ${exactPath}`);
     
     // Array of paths to try in order
@@ -164,11 +167,13 @@ export const getJSONFileRawContent = async (filename: string): Promise<string> =
       // 1. Exact filename with .json extension
       exactPath,
       // 2. Normalized filename (using our mapping function)
-      `/Transformed Json Data/${encodeURIComponent(normalizeFilename(filename))}`,
+      `/revlon-ui/Transformed Json Data/${encodeURIComponent(normalizeFilename(filename))}`,
+
       // 3. Normalized filename without encoding
-      `/Transformed Json Data/${normalizeFilename(filename)}`,
+      `/revlon-ui/Transformed Json Data/${normalizeFilename(filename)}`,
+
       // 4. Original filename with .json extension without encoding
-      `/Transformed Json Data/${exactFilename}`
+      `/revlon-ui/Transformed Json Data/${exactFilename}`
     ];
     
     let response = null;

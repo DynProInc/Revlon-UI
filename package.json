@@ -30,11 +30,17 @@
     "react-pdf": "^7.3.3",
     "react-query": "^3.39.3",
     "react-router-dom": "^7.6.1",
+    "react-virtualized-auto-sizer": "^1.0.26",
+    "react-window": "^1.8.11",
+    "react-window-infinite-loader": "^1.0.10",
     "typescript": "5.0.4",
     "uuid": "^9.0.0",
     "zustand": "^4.3.8"
   },
   "devDependencies": {
+    "@types/react-virtualized-auto-sizer": "^1.0.8",
+    "@types/react-window": "^1.8.8",
+    "@types/react-window-infinite-loader": "^1.0.9",
     "@types/uuid": "^9.0.1",
     "autoprefixer": "^10.4.14",
     "axios-mock-adapter": "^2.1.0",
